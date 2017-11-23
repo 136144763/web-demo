@@ -1,0 +1,40 @@
+package com.example.webDemo;
+
+import com.example.webDemo.domain.Goods;
+import com.example.webDemo.repository.GoodsRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.List;
+
+/**
+ * Created by Administrator on 2017/11/23.
+ */
+@Slf4j
+@SpringBootTest
+@RunWith(SpringRunner.class)
+public class JdbcTest {
+
+
+    @Autowired
+    GoodsRepository goodsRepository;
+
+    @Test
+    public void testJdbc() {
+        List<Goods> lists = goodsRepository.findAll();
+        for (Goods goods : lists) {
+            log.info("goods=={}", goods);
+        }
+    }
+
+    @Test
+    public void test() {
+        log.info("test123");
+    }
+
+
+}
