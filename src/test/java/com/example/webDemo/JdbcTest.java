@@ -2,11 +2,15 @@ package com.example.webDemo;
 
 import com.example.webDemo.domain.Goods;
 import com.example.webDemo.repository.GoodsRepository;
+import com.example.webDemo.service.GoodsService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -23,6 +27,9 @@ public class JdbcTest {
     @Autowired
     GoodsRepository goodsRepository;
 
+    @Autowired
+    GoodsService goodsService;
+
     @Test
     public void testJdbc() {
         List<Goods> lists = goodsRepository.findAll();
@@ -33,7 +40,11 @@ public class JdbcTest {
 
     @Test
     public void test() {
-        log.info("test123");
+        Page<Goods> goodsList=goodsService.findPageGoods(new PageRequest(1,15));
+        log.debug("goodsList=={}",goodsList.getTotalPages());
+        for (Goods goods:goodsList){
+            log.debug("goods=={}",goods);
+        }
     }
 
 

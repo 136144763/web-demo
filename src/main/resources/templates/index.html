@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>开始使用layui</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+
+<!--<div class="layui-form">-->
+<!--<table class="layui-table">-->
+<!--<colgroup>-->
+<!--<col width="150">-->
+<!--<col width="150">-->
+<!--<col width="200">-->
+<!--<col>-->
+<!--</colgroup>-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>商品ID</th>-->
+<!--<th>供货商</th>-->
+<!--<th>商品名称</th>-->
+<!--<th>价格</th>-->
+<!--<th>销售价</th>-->
+<!--<th>结算价</th>-->
+<!--<th>商品介绍</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody id="tableContent">-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+
+<table id="demo" lay-filter="test"></table>
+
+<script src="/layui/layui.js"></script>
+<script>
+    //    //一般直接写在一个js文件中
+    //    layui.use(['jquery', 'layer'], function () {
+    //        var $ = layui.$ //重点处
+    //            , layer = layui.layer;
+    //
+    //        layer.msg('Hello World');
+    //        //后面就跟你平时使用jQuery一样
+    //        pager();
+    //        function pager(curr) {
+    //            var data = {
+    //                page: curr || 1, //向服务端传的参数，此处只是演示
+    //            };
+    //            $.getJSON('/page/goods', data, function (res) {
+    //                var goodsList = $("#tableContent").empty();
+    //                console.log(res);
+    //                $.each(res.content, function (index, goods) {
+    //                    var html = '<tr><td>' + goods.id + '</td>' + '<td>' + goods.supplierName + '</td>' + '<td>' + goods.name + '</td>' + '<td>' + goods.price + '</td>' + '<td>' + goods.salesPrice + '</td>' + '<td>' + goods.settlementPrice + '</td>' + '<td>' + goods.goodsIntro + '</td></tr>>';
+    //                    goodsList.append(html);
+    //                })
+    //
+    //                //显示分页
+    //                laypage({
+    //                    cont: 'pager',
+    //                    pages: res.totalPages, //通过后台拿到的总页数
+    //                    curr: curr || 1, //当前页
+    //                    jump: function (obj, first) { //触发分页后的回调
+    //                        //console.log(obj, first, res);
+    //                        //if (first == undefined) first = false;
+    //                        if (!first) {
+    //                            console.log('点击跳页触发函数自身，并传递当前页：obj.curr', obj.curr);
+    //                            pager(obj.curr);
+    //                        }
+    //                    }
+    //                });
+    //
+    //            })
+    //        }
+    //
+    //    });
+
+
+    layui.use('table', function () {
+        var table = layui.table;
+        //第一个实例
+        table.render({
+            elem: '#demo'
+            , height: 315
+            , url: '/page/goods' //数据接口
+            , page: true //开启分页
+            , cols: [[ //表头
+                {field: 'id', title: 'ID', width: 80, sort: true, fixed: 'left'}
+                , {field: 'supplierName', title: '用户名', width: 80}
+                , {field: 'name', title: '性别', width: 80, sort: true}
+                , {field: 'price', title: '城市', width: 80}
+                , {field: 'salesPrice', title: '签名', width: 177}
+                , {field: 'settlementPrice', title: '积分', width: 80, sort: true}
+                , {field: 'goodsIntro', title: '评分', width: 80, sort: true}
+            ]]
+        });
+    });
+</script>
+</body>
+</html>

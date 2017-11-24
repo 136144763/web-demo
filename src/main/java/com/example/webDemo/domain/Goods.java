@@ -17,18 +17,18 @@ public class Goods {
     @Id
     public Long id; // 商品ID
 
-    public String supplierName;
+    public String supplierName;//供货商
 
 
-    public String name;
+    public String name;//商品名称
 
-    public String price;
+    public String price;//价格
 
-    public String salesPrice;
+    public String salesPrice;//销售价
 
-    public String settlementPrice;
+    public String settlementPrice;//结算价
 
-    public String goodsIntro;
+    public String goodsIntro;//商品介绍
 
 
 }
