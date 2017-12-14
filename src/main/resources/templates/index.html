@@ -35,7 +35,7 @@
 <table id="demo" lay-filter="test"></table>
 
 <script src="/layui/layui.js"></script>
-<script>
+<script type="text/javascript">
     //一般直接写在一个js文件中
     layui.use(['jquery', 'laypage', 'layer'], function () {
         var $ = layui.$ //重点处
@@ -45,9 +45,10 @@
         layer.msg('Hello World');
         //后面就跟你平时使用jQuery一样
         pager();
-        function pager(curr) {
+        function pager(curr, size) {
             var data = {
-                page: curr || 1, //向服务端传的参数，此处只是演示
+                page: curr || 1,
+                size: size || 10
             };
             $.getJSON('/page/goods', data, function (res) {
                 var goodsList = $("#tableContent").empty();
@@ -55,36 +56,22 @@
                 $.each(res.content, function (index, goods) {
                     var html = '<tr><td>' + goods.id + '</td>' + '<td>' + goods.supplierName + '</td>' + '<td>' + goods.name + '</td>' + '<td>' + goods.price + '</td>' + '<td>' + goods.salesPrice + '</td>' + '<td>' + goods.settlementPrice + '</td>' + '<td>' + goods.goodsIntro + '</td></tr>>';
                     goodsList.append(html);
-                })
-
-                //显示分页
-//                    laypage({
-//                        cont: 'pager',
-//                        pages: res.totalPages, //通过后台拿到的总页数
-//                        curr: curr || 1, //当前页
-//                        jump: function (obj, first) { //触发分页后的回调
-//                            //console.log(obj, first, res);
-//                            //if (first == undefined) first = false;
-//                            if (!first) {
-//                                console.log('点击跳页触发函数自身，并传递当前页：obj.curr', obj.curr);
-//                                pager(obj.curr);
-//                            }
-//                        }
-//                    });
+                });
                 //完整功能
                 laypage.render({
-                    elem: 'demo'
-                    , count: res.totalPages
-                    , layout: ['count', 'prev', 'page', 'next', 'limit', 'skip']
-                    , jump: function (obj) {
+                    elem: 'demo',
+                    count: res.totalElements,
+                    curr: curr || 1,
+                    limit: res.size,
+                    layout: ['count', 'prev', 'page', 'next', 'limit', 'skip'],
+                    jump: function (obj, first) {
                         console.log(obj);
-                        if(obj.curr==1){
-                            console.log(obj.curr);
-                            pager(obj.curr);
+                        if (!first) {
+                            console.log('点击跳页触发函数自身，并传递当前页：obj.curr', obj.curr);
+                            pager(obj.curr, obj.limit);
                         }
                     }
                 });
-
             })
         }
     });

@@ -29,9 +29,9 @@ public class IndexController {
 
     @GetMapping("/page/goods")
     @ResponseBody
-    public Object findAllGoods(@RequestParam(value = "page") int page, @RequestParam(value = "size", defaultValue = "20") int size) {
-        log.debug("page=={}", page);
-        PageRequest request = new PageRequest(page - 1, size, new Sort(Sort.Direction.DESC, "id"));
+    public Object findAllGoods(@RequestParam(value = "page") int page, @RequestParam(value = "size", defaultValue = "10") int size) {
+        log.debug("pageNum=={}", page);
+        PageRequest request = new PageRequest(page - 1, size, new Sort(Sort.Direction.ASC, "id"));
         return goodsService.findPageGoods(request);
     }
 
