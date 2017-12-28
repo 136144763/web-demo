@@ -10456,3 +10456,916 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2017-12-14 20:40:09.637 DEBUG 32416 --- [http-nio-8080-exec-3] c.e.webDemo.controller.IndexController   : pageNum==35
 2017-12-14 20:40:09.828 DEBUG 32416 --- [http-nio-8080-exec-4] c.e.webDemo.controller.IndexController   : pageNum==36
 2017-12-14 20:40:10.008 DEBUG 32416 --- [http-nio-8080-exec-5] c.e.webDemo.controller.IndexController   : pageNum==37
+2017-12-14 20:47:27.615  INFO 34600 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 34600 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-14 20:47:27.617 DEBUG 34600 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-14 20:47:27.617  INFO 34600 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-14 20:47:27.924  INFO 34600 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 20:47:27 CST 2017]; root of context hierarchy
+2017-12-14 20:47:28.874  INFO 34600 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-12-14 20:47:29.028  WARN 34600 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 20:47:29.422  INFO 34600 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-14 20:47:29.433  INFO 34600 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-14 20:47:29.434  INFO 34600 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-14 20:47:29.685  INFO 34600 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-14 20:47:29.685  INFO 34600 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1763 ms
+2017-12-14 20:47:29.851  INFO 34600 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-14 20:47:29.857  INFO 34600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-14 20:47:29.860  INFO 34600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-14 20:47:29.861  INFO 34600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-14 20:47:29.861  INFO 34600 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-14 20:47:30.253  INFO 34600 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-14 20:47:30.262  INFO 34600 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-14 20:47:30.336  INFO 34600 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-14 20:47:30.337  INFO 34600 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-14 20:47:30.338  INFO 34600 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-14 20:47:30.366  INFO 34600 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-14 20:47:30.434  INFO 34600 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-14 20:47:30.771  INFO 34600 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-14 20:47:30.980  WARN 34600 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 20:47:31.136  INFO 34600 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 20:47:27 CST 2017]; root of context hierarchy
+2017-12-14 20:47:31.186  INFO 34600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-14 20:47:31.187  INFO 34600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-14 20:47:31.189  INFO 34600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-14 20:47:31.190  INFO 34600 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-14 20:47:31.210  INFO 34600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 20:47:31.211  INFO 34600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 20:47:31.236  INFO 34600 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 20:47:31.263  WARN 34600 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-14 20:47:31.635  INFO 34600 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-14 20:47:31.687  INFO 34600 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-14 20:47:31.690  INFO 34600 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.343 seconds (JVM running for 4.797)
+2017-12-14 20:58:57.030  INFO 36496 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 36496 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-14 20:58:57.032 DEBUG 36496 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-14 20:58:57.032  INFO 36496 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-14 20:58:57.215  INFO 36496 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 20:58:57 CST 2017]; root of context hierarchy
+2017-12-14 20:58:58.218  INFO 36496 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-12-14 20:58:58.381  WARN 36496 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 20:58:58.742  INFO 36496 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-14 20:58:58.751  INFO 36496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-14 20:58:58.752  INFO 36496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-14 20:58:58.857  INFO 36496 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-14 20:58:58.857  INFO 36496 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1645 ms
+2017-12-14 20:58:59.006  INFO 36496 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-14 20:58:59.011  INFO 36496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-14 20:58:59.011  INFO 36496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-14 20:58:59.011  INFO 36496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-14 20:58:59.011  INFO 36496 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-14 20:58:59.426  INFO 36496 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-14 20:58:59.435  INFO 36496 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-14 20:58:59.478  INFO 36496 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-14 20:58:59.479  INFO 36496 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-14 20:58:59.480  INFO 36496 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-14 20:58:59.509  INFO 36496 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-14 20:58:59.577  INFO 36496 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-14 20:58:59.917  INFO 36496 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-14 20:59:00.126  WARN 36496 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 20:59:00.279  INFO 36496 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 20:58:57 CST 2017]; root of context hierarchy
+2017-12-14 20:59:00.329  INFO 36496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-14 20:59:00.329  INFO 36496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int,java.lang.String)
+2017-12-14 20:59:00.331  INFO 36496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-14 20:59:00.331  INFO 36496 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-14 20:59:00.353  INFO 36496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 20:59:00.354  INFO 36496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 20:59:00.384  INFO 36496 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 20:59:00.409  WARN 36496 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-14 20:59:00.786  INFO 36496 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-14 20:59:00.835  INFO 36496 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-14 20:59:00.838  INFO 36496 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.06 seconds (JVM running for 4.533)
+2017-12-14 20:59:08.542  INFO 36496 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-14 20:59:08.542  INFO 36496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-14 20:59:08.574  INFO 36496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2017-12-14 20:59:08.648  INFO 36496 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-14 21:00:41.147  INFO 36512 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 36512 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-14 21:00:41.150 DEBUG 36512 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-14 21:00:41.150  INFO 36512 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-14 21:00:41.375  INFO 36512 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 21:00:41 CST 2017]; root of context hierarchy
+2017-12-14 21:00:42.344  INFO 36512 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-12-14 21:00:42.545  WARN 36512 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 21:00:42.933  INFO 36512 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-14 21:00:42.941  INFO 36512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-14 21:00:42.943  INFO 36512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-14 21:00:43.080  INFO 36512 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-14 21:00:43.080  INFO 36512 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1708 ms
+2017-12-14 21:00:43.268  INFO 36512 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-14 21:00:43.271  INFO 36512 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-14 21:00:43.271  INFO 36512 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-14 21:00:43.272  INFO 36512 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-14 21:00:43.272  INFO 36512 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-14 21:00:43.718  INFO 36512 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-14 21:00:43.727  INFO 36512 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-14 21:00:43.770  INFO 36512 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-14 21:00:43.771  INFO 36512 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-14 21:00:43.772  INFO 36512 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-14 21:00:43.808  INFO 36512 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-14 21:00:43.899  INFO 36512 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-14 21:00:44.284  INFO 36512 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-14 21:00:44.523  WARN 36512 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 21:00:44.718  INFO 36512 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 21:00:41 CST 2017]; root of context hierarchy
+2017-12-14 21:00:44.772  INFO 36512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-14 21:00:44.773  INFO 36512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int,java.lang.String)
+2017-12-14 21:00:44.775  INFO 36512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-14 21:00:44.776  INFO 36512 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-14 21:00:44.799  INFO 36512 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:00:44.799  INFO 36512 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:00:44.826  INFO 36512 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:00:44.863  WARN 36512 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-14 21:00:45.284  INFO 36512 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-14 21:00:45.357  INFO 36512 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-14 21:00:45.360  INFO 36512 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.494 seconds (JVM running for 4.962)
+2017-12-14 21:00:49.083  INFO 36512 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-14 21:00:49.083  INFO 36512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-14 21:00:49.107  INFO 36512 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2017-12-14 21:00:49.166  INFO 36512 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-14 21:01:25.742  INFO 25660 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 25660 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-14 21:01:25.744 DEBUG 25660 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-14 21:01:25.745  INFO 25660 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-14 21:01:26.028  INFO 25660 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 21:01:26 CST 2017]; root of context hierarchy
+2017-12-14 21:01:26.835  INFO 25660 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-12-14 21:01:27.038  WARN 25660 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 21:01:27.429  INFO 25660 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-14 21:01:27.438  INFO 25660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-14 21:01:27.439  INFO 25660 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-14 21:01:27.582  INFO 25660 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-14 21:01:27.582  INFO 25660 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1556 ms
+2017-12-14 21:01:27.734  INFO 25660 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-14 21:01:27.738  INFO 25660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-14 21:01:27.740  INFO 25660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-14 21:01:27.740  INFO 25660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-14 21:01:27.741  INFO 25660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-14 21:01:28.195  INFO 25660 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-14 21:01:28.206  INFO 25660 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-14 21:01:28.253  INFO 25660 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-14 21:01:28.254  INFO 25660 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-14 21:01:28.255  INFO 25660 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-14 21:01:28.284  INFO 25660 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-14 21:01:28.358  INFO 25660 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-14 21:01:28.705  INFO 25660 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-14 21:01:28.931  WARN 25660 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 21:01:29.091  INFO 25660 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 21:01:26 CST 2017]; root of context hierarchy
+2017-12-14 21:01:29.160  INFO 25660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-14 21:01:29.161  INFO 25660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int,java.lang.String)
+2017-12-14 21:01:29.163  INFO 25660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-14 21:01:29.164  INFO 25660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-14 21:01:29.189  INFO 25660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:01:29.189  INFO 25660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:01:29.245  INFO 25660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:01:29.281  WARN 25660 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-14 21:01:29.770  INFO 25660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-14 21:01:29.828  INFO 25660 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-14 21:01:29.831  INFO 25660 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.532 seconds (JVM running for 5.499)
+2017-12-14 21:01:36.708  INFO 25660 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-14 21:01:36.708  INFO 25660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-14 21:01:36.728  INFO 25660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2017-12-14 21:01:36.779  INFO 25660 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-14 21:02:08.458  INFO 36172 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 36172 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-14 21:02:08.460 DEBUG 36172 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-14 21:02:08.461  INFO 36172 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-14 21:02:08.639  INFO 36172 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 21:02:08 CST 2017]; root of context hierarchy
+2017-12-14 21:02:09.542  INFO 36172 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-12-14 21:02:09.697  WARN 36172 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 21:02:10.048  INFO 36172 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-14 21:02:10.058  INFO 36172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-14 21:02:10.059  INFO 36172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-14 21:02:10.175  INFO 36172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-14 21:02:10.175  INFO 36172 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1538 ms
+2017-12-14 21:02:10.309  INFO 36172 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-14 21:02:10.312  INFO 36172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-14 21:02:10.312  INFO 36172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-14 21:02:10.312  INFO 36172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-14 21:02:10.313  INFO 36172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-14 21:02:10.708  INFO 36172 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-14 21:02:10.717  INFO 36172 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-14 21:02:10.762  INFO 36172 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-14 21:02:10.763  INFO 36172 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-14 21:02:10.764  INFO 36172 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-14 21:02:10.792  INFO 36172 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-14 21:02:10.861  INFO 36172 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-14 21:02:11.201  INFO 36172 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-14 21:02:11.404  WARN 36172 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 21:02:11.556  INFO 36172 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 21:02:08 CST 2017]; root of context hierarchy
+2017-12-14 21:02:11.606  INFO 36172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-14 21:02:11.607  INFO 36172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int,java.lang.String)
+2017-12-14 21:02:11.609  INFO 36172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-14 21:02:11.610  INFO 36172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-14 21:02:11.631  INFO 36172 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:02:11.632  INFO 36172 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:02:11.660  INFO 36172 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:02:11.687  WARN 36172 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-14 21:02:12.052  INFO 36172 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-14 21:02:12.101  INFO 36172 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-14 21:02:12.104  INFO 36172 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 3.923 seconds (JVM running for 4.35)
+2017-12-14 21:02:14.734  INFO 36172 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-14 21:02:14.734  INFO 36172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-14 21:02:14.758  INFO 36172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+2017-12-14 21:02:14.811  INFO 36172 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-14 21:02:29.978  INFO 37020 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 37020 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-14 21:02:29.980 DEBUG 37020 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-14 21:02:29.981  INFO 37020 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-14 21:02:30.160  INFO 37020 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 21:02:30 CST 2017]; root of context hierarchy
+2017-12-14 21:02:31.058  INFO 37020 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-12-14 21:02:31.211  WARN 37020 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 21:02:31.571  INFO 37020 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-14 21:02:31.580  INFO 37020 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-14 21:02:31.581  INFO 37020 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-14 21:02:31.688  INFO 37020 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-14 21:02:31.688  INFO 37020 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1533 ms
+2017-12-14 21:02:31.826  INFO 37020 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-14 21:02:31.830  INFO 37020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-14 21:02:31.830  INFO 37020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-14 21:02:31.830  INFO 37020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-14 21:02:31.830  INFO 37020 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-14 21:02:32.238  INFO 37020 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-14 21:02:32.248  INFO 37020 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-14 21:02:32.293  INFO 37020 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-14 21:02:32.294  INFO 37020 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-14 21:02:32.295  INFO 37020 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-14 21:02:32.322  INFO 37020 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-14 21:02:32.394  INFO 37020 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-14 21:02:32.725  INFO 37020 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-14 21:02:32.928  WARN 37020 --- [main] o.h.v.m.ParameterMessageInterpolator     : HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2017-12-14 21:02:33.084  INFO 37020 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2fd6b6c7: startup date [Thu Dec 14 21:02:30 CST 2017]; root of context hierarchy
+2017-12-14 21:02:33.136  INFO 37020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-14 21:02:33.137  INFO 37020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-14 21:02:33.139  INFO 37020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-14 21:02:33.140  INFO 37020 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-14 21:02:33.162  INFO 37020 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:02:33.162  INFO 37020 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:02:33.192  INFO 37020 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-14 21:02:33.220  WARN 37020 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-14 21:02:33.603  INFO 37020 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-14 21:02:33.655  INFO 37020 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-14 21:02:33.659  INFO 37020 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 3.953 seconds (JVM running for 4.445)
+2017-12-14 21:02:35.522  INFO 37020 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-14 21:02:35.522  INFO 37020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-14 21:02:35.545  INFO 37020 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+2017-12-14 21:02:35.598  INFO 37020 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-14 21:02:36.128 DEBUG 37020 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==1
+2017-12-14 21:02:39.174 DEBUG 37020 --- [http-nio-8080-exec-3] c.e.webDemo.controller.IndexController   : pageNum==2
+2017-12-14 21:02:41.544 DEBUG 37020 --- [http-nio-8080-exec-4] c.e.webDemo.controller.IndexController   : pageNum==2
+2017-12-14 21:02:48.894 DEBUG 37020 --- [http-nio-8080-exec-5] c.e.webDemo.controller.IndexController   : pageNum==3
+2017-12-15 08:57:25.384  INFO 4488 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 4488 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-15 08:57:25.387 DEBUG 4488 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-15 08:57:25.387  INFO 4488 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-15 08:57:25.620  INFO 4488 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Fri Dec 15 08:57:25 CST 2017]; root of context hierarchy
+2017-12-15 08:57:26.990  INFO 4488 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-15 08:57:26.999  INFO 4488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-15 08:57:27.000  INFO 4488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-15 08:57:27.109  INFO 4488 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-15 08:57:27.109  INFO 4488 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1494 ms
+2017-12-15 08:57:27.242  INFO 4488 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-15 08:57:27.245  INFO 4488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-15 08:57:27.245  INFO 4488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-15 08:57:27.245  INFO 4488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-15 08:57:27.245  INFO 4488 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-15 08:57:27.649  INFO 4488 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-15 08:57:27.658  INFO 4488 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-15 08:57:27.733  INFO 4488 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-15 08:57:27.734  INFO 4488 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-15 08:57:27.735  INFO 4488 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-15 08:57:27.772  INFO 4488 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-15 08:57:27.868  INFO 4488 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-15 08:57:28.236  INFO 4488 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-15 08:57:28.628  INFO 4488 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Fri Dec 15 08:57:25 CST 2017]; root of context hierarchy
+2017-12-15 08:57:28.697  INFO 4488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-15 08:57:28.697  INFO 4488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-15 08:57:28.699  INFO 4488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-15 08:57:28.700  INFO 4488 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-15 08:57:28.722  INFO 4488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 08:57:28.722  INFO 4488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 08:57:28.749  INFO 4488 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 08:57:28.776  WARN 4488 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-15 08:57:29.168  INFO 4488 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-15 08:57:29.250  INFO 4488 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-15 08:57:29.254  INFO 4488 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.396 seconds (JVM running for 5.123)
+2017-12-15 08:57:38.597  INFO 4488 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-15 08:57:38.597  INFO 4488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-15 08:57:38.617  INFO 4488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2017-12-15 08:57:38.680  INFO 4488 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-15 08:57:39.361 DEBUG 4488 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==1
+2017-12-15 08:57:46.420 DEBUG 4488 --- [http-nio-8080-exec-3] c.e.webDemo.controller.IndexController   : pageNum==2
+2017-12-15 08:57:49.321 DEBUG 4488 --- [http-nio-8080-exec-5] c.e.webDemo.controller.IndexController   : pageNum==3
+2017-12-15 08:57:51.824 DEBUG 4488 --- [http-nio-8080-exec-10] c.e.webDemo.controller.IndexController   : pageNum==3
+2017-12-15 08:57:57.528 DEBUG 4488 --- [http-nio-8080-exec-1] c.e.webDemo.controller.IndexController   : pageNum==4
+2017-12-15 08:57:59.535 DEBUG 4488 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==5
+2017-12-15 08:58:01.015 DEBUG 4488 --- [http-nio-8080-exec-3] c.e.webDemo.controller.IndexController   : pageNum==77
+2017-12-15 08:58:01.903 DEBUG 4488 --- [http-nio-8080-exec-7] c.e.webDemo.controller.IndexController   : pageNum==76
+2017-12-15 08:58:02.384 DEBUG 4488 --- [http-nio-8080-exec-8] c.e.webDemo.controller.IndexController   : pageNum==75
+2017-12-15 08:58:02.975 DEBUG 4488 --- [http-nio-8080-exec-9] c.e.webDemo.controller.IndexController   : pageNum==74
+2017-12-15 08:58:03.343 DEBUG 4488 --- [http-nio-8080-exec-4] c.e.webDemo.controller.IndexController   : pageNum==72
+2017-12-15 08:58:54.552  INFO 8248 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 8248 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-15 08:58:54.555 DEBUG 8248 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-15 08:58:54.555  INFO 8248 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-15 08:58:54.865  INFO 8248 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Fri Dec 15 08:58:54 CST 2017]; root of context hierarchy
+2017-12-15 08:58:56.220  INFO 8248 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-15 08:58:56.228  INFO 8248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-15 08:58:56.229  INFO 8248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-15 08:58:56.321  INFO 8248 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-15 08:58:56.321  INFO 8248 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1459 ms
+2017-12-15 08:58:56.451  INFO 8248 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-15 08:58:56.454  INFO 8248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-15 08:58:56.455  INFO 8248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-15 08:58:56.455  INFO 8248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-15 08:58:56.455  INFO 8248 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-15 08:58:56.848  INFO 8248 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-15 08:58:56.857  INFO 8248 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-15 08:58:56.901  INFO 8248 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-15 08:58:56.902  INFO 8248 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-15 08:58:56.903  INFO 8248 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-15 08:58:56.930  INFO 8248 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-15 08:58:56.996  INFO 8248 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-15 08:58:57.318  INFO 8248 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-15 08:58:57.623  INFO 8248 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Fri Dec 15 08:58:54 CST 2017]; root of context hierarchy
+2017-12-15 08:58:57.666  INFO 8248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-15 08:58:57.667  INFO 8248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-15 08:58:57.668  INFO 8248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-15 08:58:57.669  INFO 8248 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-15 08:58:57.687  INFO 8248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 08:58:57.687  INFO 8248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 08:58:57.711  INFO 8248 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 08:58:57.736  WARN 8248 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-15 08:58:58.081  INFO 8248 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-15 08:58:58.124  INFO 8248 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-15 08:58:58.128  INFO 8248 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 3.867 seconds (JVM running for 4.322)
+2017-12-15 08:59:01.319  INFO 8248 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-15 08:59:01.320  INFO 8248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-15 08:59:01.340  INFO 8248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2017-12-15 08:59:01.388  INFO 8248 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-15 08:59:01.862 DEBUG 8248 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==1
+2017-12-15 08:59:05.208 DEBUG 8248 --- [http-nio-8080-exec-3] c.e.webDemo.controller.IndexController   : pageNum==3
+2017-12-15 08:59:06.737 DEBUG 8248 --- [http-nio-8080-exec-4] c.e.webDemo.controller.IndexController   : pageNum==4
+2017-12-15 08:59:07.667 DEBUG 8248 --- [http-nio-8080-exec-5] c.e.webDemo.controller.IndexController   : pageNum==231
+2017-12-15 08:59:10.392 DEBUG 8248 --- [http-nio-8080-exec-6] c.e.webDemo.controller.IndexController   : pageNum==77
+2017-12-15 08:59:12.480 DEBUG 8248 --- [http-nio-8080-exec-7] c.e.webDemo.controller.IndexController   : pageNum==76
+2017-12-15 08:59:14.144 DEBUG 8248 --- [http-nio-8080-exec-8] c.e.webDemo.controller.IndexController   : pageNum==74
+2017-12-15 08:59:15.457 DEBUG 8248 --- [http-nio-8080-exec-9] c.e.webDemo.controller.IndexController   : pageNum==72
+2017-12-15 08:59:17.073 DEBUG 8248 --- [http-nio-8080-exec-10] c.e.webDemo.controller.IndexController   : pageNum==70
+2017-12-15 08:59:17.544 DEBUG 8248 --- [http-nio-8080-exec-1] c.e.webDemo.controller.IndexController   : pageNum==68
+2017-12-15 08:59:22.648 DEBUG 8248 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==68
+2017-12-15 08:59:34.689 DEBUG 8248 --- [http-nio-8080-exec-3] c.e.webDemo.controller.IndexController   : pageNum==67
+2017-12-15 08:59:35.321 DEBUG 8248 --- [http-nio-8080-exec-4] c.e.webDemo.controller.IndexController   : pageNum==66
+2017-12-15 08:59:35.712 DEBUG 8248 --- [http-nio-8080-exec-5] c.e.webDemo.controller.IndexController   : pageNum==64
+2017-12-15 08:59:36.032 DEBUG 8248 --- [http-nio-8080-exec-6] c.e.webDemo.controller.IndexController   : pageNum==62
+2017-12-15 08:59:36.369 DEBUG 8248 --- [http-nio-8080-exec-7] c.e.webDemo.controller.IndexController   : pageNum==60
+2017-12-15 08:59:36.608 DEBUG 8248 --- [http-nio-8080-exec-8] c.e.webDemo.controller.IndexController   : pageNum==58
+2017-12-15 08:59:36.831 DEBUG 8248 --- [http-nio-8080-exec-9] c.e.webDemo.controller.IndexController   : pageNum==56
+2017-12-15 08:59:37.048 DEBUG 8248 --- [http-nio-8080-exec-10] c.e.webDemo.controller.IndexController   : pageNum==54
+2017-12-15 08:59:37.225 DEBUG 8248 --- [http-nio-8080-exec-1] c.e.webDemo.controller.IndexController   : pageNum==52
+2017-12-15 08:59:37.432 DEBUG 8248 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==50
+2017-12-15 08:59:37.633 DEBUG 8248 --- [http-nio-8080-exec-3] c.e.webDemo.controller.IndexController   : pageNum==48
+2017-12-15 09:00:40.259  INFO 8844 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 8844 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-15 09:00:40.261  INFO 8844 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-15 09:00:40.556  INFO 8844 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d76aeea: startup date [Fri Dec 15 09:00:40 CST 2017]; root of context hierarchy
+2017-12-15 09:00:41.820  INFO 8844 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-15 09:00:41.827  INFO 8844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-15 09:00:41.827  INFO 8844 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-15 09:00:41.914  INFO 8844 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-15 09:00:41.914  INFO 8844 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1361 ms
+2017-12-15 09:00:42.032  INFO 8844 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-15 09:00:42.035  INFO 8844 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-15 09:00:42.036  INFO 8844 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-15 09:00:42.036  INFO 8844 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-15 09:00:42.036  INFO 8844 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-15 09:00:42.409  INFO 8844 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-15 09:00:42.417  INFO 8844 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-15 09:00:42.463  INFO 8844 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-15 09:00:42.464  INFO 8844 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-15 09:00:42.464  INFO 8844 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-15 09:00:42.489  INFO 8844 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-15 09:00:42.552  INFO 8844 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-15 09:00:42.867  INFO 8844 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-15 09:00:43.183  INFO 8844 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1d76aeea: startup date [Fri Dec 15 09:00:40 CST 2017]; root of context hierarchy
+2017-12-15 09:00:43.228  INFO 8844 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-15 09:00:43.229  INFO 8844 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-15 09:00:43.231  INFO 8844 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-15 09:00:43.231  INFO 8844 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-15 09:00:43.251  INFO 8844 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 09:00:43.251  INFO 8844 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 09:00:43.277  INFO 8844 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 09:00:43.304  WARN 8844 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-15 09:00:43.705  INFO 8844 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-15 09:00:43.750  INFO 8844 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-15 09:00:43.753  INFO 8844 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 3.751 seconds (JVM running for 4.239)
+2017-12-15 09:00:46.572  INFO 8844 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-15 09:00:46.572  INFO 8844 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-15 09:00:46.591  INFO 8844 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2017-12-15 09:00:46.632  INFO 8844 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-15 09:02:33.935  INFO 5136 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 5136 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-15 09:02:33.937 DEBUG 5136 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-15 09:02:33.938  INFO 5136 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-15 09:02:34.123  INFO 5136 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Fri Dec 15 09:02:34 CST 2017]; root of context hierarchy
+2017-12-15 09:02:36.124  INFO 5136 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-15 09:02:36.132  INFO 5136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-15 09:02:36.133  INFO 5136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-15 09:02:36.229  INFO 5136 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-15 09:02:36.229  INFO 5136 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2119 ms
+2017-12-15 09:02:36.362  INFO 5136 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-15 09:02:36.366  INFO 5136 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-15 09:02:36.367  INFO 5136 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-15 09:02:36.367  INFO 5136 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-15 09:02:36.367  INFO 5136 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-15 09:02:36.745  INFO 5136 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-15 09:02:36.755  INFO 5136 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-15 09:02:36.797  INFO 5136 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-15 09:02:36.798  INFO 5136 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-15 09:02:36.799  INFO 5136 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-15 09:02:36.826  INFO 5136 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-15 09:02:36.899  INFO 5136 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-15 09:02:37.233  INFO 5136 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-15 09:02:37.546  INFO 5136 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Fri Dec 15 09:02:34 CST 2017]; root of context hierarchy
+2017-12-15 09:02:37.590  INFO 5136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-15 09:02:37.591  INFO 5136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-15 09:02:37.593  INFO 5136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-15 09:02:37.593  INFO 5136 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-15 09:02:37.612  INFO 5136 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 09:02:37.613  INFO 5136 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 09:02:37.636  INFO 5136 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-15 09:02:37.658  WARN 5136 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-15 09:02:37.990  INFO 5136 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-15 09:02:38.043  INFO 5136 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-15 09:02:38.046  INFO 5136 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.398 seconds (JVM running for 4.813)
+2017-12-15 09:02:48.138  INFO 5136 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-15 09:02:48.138  INFO 5136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-15 09:02:48.157  INFO 5136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2017-12-15 09:02:48.496 DEBUG 5136 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==1
+2017-12-15 09:02:48.538  INFO 5136 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-15 09:03:02.197 DEBUG 5136 --- [http-nio-8080-exec-7] c.e.webDemo.controller.IndexController   : pageNum==2
+2017-12-15 09:03:03.752 DEBUG 5136 --- [http-nio-8080-exec-9] c.e.webDemo.controller.IndexController   : pageNum==3
+2017-12-15 09:03:04.416 DEBUG 5136 --- [http-nio-8080-exec-10] c.e.webDemo.controller.IndexController   : pageNum==4
+2017-12-15 09:03:04.761 DEBUG 5136 --- [http-nio-8080-exec-1] c.e.webDemo.controller.IndexController   : pageNum==5
+2017-12-15 09:03:04.961 DEBUG 5136 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==231
+2017-12-28 16:56:27.222  INFO 18576 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 18576 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 16:56:27.225 DEBUG 18576 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 16:56:27.225  INFO 18576 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 16:56:27.583  INFO 18576 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 16:56:27 CST 2017]; root of context hierarchy
+2017-12-28 16:56:29.058  INFO 18576 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 16:56:29.072  INFO 18576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 16:56:29.073  INFO 18576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 16:56:29.189  INFO 18576 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 16:56:29.189  INFO 18576 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1608 ms
+2017-12-28 16:56:29.371  INFO 18576 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 16:56:29.376  INFO 18576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 16:56:29.376  INFO 18576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 16:56:29.376  INFO 18576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 16:56:29.377  INFO 18576 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 16:56:29.964  INFO 18576 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 16:56:29.976  INFO 18576 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 16:56:30.109  INFO 18576 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 16:56:30.110  INFO 18576 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 16:56:30.113  INFO 18576 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 16:56:30.164  INFO 18576 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 16:56:30.313  INFO 18576 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 16:56:30.813  INFO 18576 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 16:56:31.196  INFO 18576 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 16:56:27 CST 2017]; root of context hierarchy
+2017-12-28 16:56:31.260  INFO 18576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 16:56:31.261  INFO 18576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 16:56:31.263  INFO 18576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 16:56:31.264  INFO 18576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 16:56:31.287  INFO 18576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 16:56:31.287  INFO 18576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 16:56:31.316  INFO 18576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 16:56:31.344  WARN 18576 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 16:56:31.761  INFO 18576 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 16:56:31.812  INFO 18576 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 16:56:31.815  INFO 18576 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 5.008 seconds (JVM running for 5.536)
+2017-12-28 16:56:37.678  INFO 18576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 16:56:37.679  INFO 18576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 16:56:37.701  INFO 18576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2017-12-28 16:56:53.939 DEBUG 18576 --- [http-nio-8080-exec-1] c.e.webDemo.controller.IndexController   : pageNum==1
+2017-12-28 16:56:53.981  INFO 18576 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-28 16:56:58.326 DEBUG 18576 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==2
+2017-12-28 16:57:00.237 DEBUG 18576 --- [http-nio-8080-exec-3] c.e.webDemo.controller.IndexController   : pageNum==3
+2017-12-28 16:57:01.444 DEBUG 18576 --- [http-nio-8080-exec-4] c.e.webDemo.controller.IndexController   : pageNum==4
+2017-12-28 16:57:01.980 DEBUG 18576 --- [http-nio-8080-exec-5] c.e.webDemo.controller.IndexController   : pageNum==5
+2017-12-28 16:57:02.531 DEBUG 18576 --- [http-nio-8080-exec-6] c.e.webDemo.controller.IndexController   : pageNum==231
+2017-12-28 16:57:04.396 DEBUG 18576 --- [http-nio-8080-exec-8] c.e.webDemo.controller.IndexController   : pageNum==230
+2017-12-28 16:57:06.140 DEBUG 18576 --- [http-nio-8080-exec-10] c.e.webDemo.controller.IndexController   : pageNum==1
+2017-12-28 16:57:08.836 DEBUG 18576 --- [http-nio-8080-exec-1] c.e.webDemo.controller.IndexController   : pageNum==2
+2017-12-28 16:57:10.819 DEBUG 18576 --- [http-nio-8080-exec-2] c.e.webDemo.controller.IndexController   : pageNum==3
+2017-12-28 16:57:11.684 DEBUG 18576 --- [http-nio-8080-exec-3] c.e.webDemo.controller.IndexController   : pageNum==5
+2017-12-28 16:57:17.870 DEBUG 18576 --- [http-nio-8080-exec-4] c.e.webDemo.controller.IndexController   : pageNum==6
+2017-12-28 16:57:36.797 DEBUG 18576 --- [http-nio-8080-exec-5] c.e.webDemo.controller.IndexController   : pageNum==7
+2017-12-28 16:57:38.044 DEBUG 18576 --- [http-nio-8080-exec-6] c.e.webDemo.controller.IndexController   : pageNum==8
+2017-12-28 16:57:40.683 DEBUG 18576 --- [http-nio-8080-exec-9] c.e.webDemo.controller.IndexController   : pageNum==231
+2017-12-28 16:57:45.813 DEBUG 18576 --- [http-nio-8080-exec-7] c.e.webDemo.controller.IndexController   : pageNum==230
+2017-12-28 16:58:02.929 DEBUG 18576 --- [http-nio-8080-exec-10] c.e.webDemo.controller.IndexController   : pageNum==6
+2017-12-28 16:58:19.742 DEBUG 18576 --- [http-nio-8080-exec-6] c.e.webDemo.controller.IndexController   : pageNum==231
+2017-12-28 16:58:21.197 DEBUG 18576 --- [http-nio-8080-exec-9] c.e.webDemo.controller.IndexController   : pageNum==230
+2017-12-28 16:58:23.524 DEBUG 18576 --- [http-nio-8080-exec-7] c.e.webDemo.controller.IndexController   : pageNum==227
+2017-12-28 16:58:24.340 DEBUG 18576 --- [http-nio-8080-exec-8] c.e.webDemo.controller.IndexController   : pageNum==1
+2017-12-28 17:01:41.766  INFO 18172 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 18172 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:01:41.768 DEBUG 18172 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:01:41.769  INFO 18172 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:01:41.951  INFO 18172 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:01:41 CST 2017]; root of context hierarchy
+2017-12-28 17:01:43.366  INFO 18172 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:01:43.374  INFO 18172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:01:43.375  INFO 18172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:01:43.467  INFO 18172 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:01:43.468  INFO 18172 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1520 ms
+2017-12-28 17:01:43.598  INFO 18172 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:01:43.602  INFO 18172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:01:43.602  INFO 18172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:01:43.602  INFO 18172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:01:43.602  INFO 18172 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:01:44.042  INFO 18172 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:01:44.052  INFO 18172 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:01:44.102  INFO 18172 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:01:44.103  INFO 18172 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:01:44.104  INFO 18172 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:01:44.133  INFO 18172 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:01:44.206  INFO 18172 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:01:44.567  INFO 18172 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:01:44.930  INFO 18172 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:01:41 CST 2017]; root of context hierarchy
+2017-12-28 17:01:44.983  INFO 18172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:01:44.984  INFO 18172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:01:44.986  INFO 18172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:01:44.986  INFO 18172 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:01:45.007  INFO 18172 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:01:45.007  INFO 18172 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:01:45.035  INFO 18172 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:01:45.065  WARN 18172 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:01:45.535  INFO 18172 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:01:45.590  INFO 18172 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:01:45.595  INFO 18172 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.096 seconds (JVM running for 4.522)
+2017-12-28 17:01:51.154  INFO 18172 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 17:01:51.155  INFO 18172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 17:01:51.181  INFO 18172 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2017-12-28 17:01:51.547  INFO 18172 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-28 17:15:41.694  INFO 19652 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 19652 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:15:41.696 DEBUG 19652 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:15:41.696  INFO 19652 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:15:41.864  INFO 19652 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:15:41 CST 2017]; root of context hierarchy
+2017-12-28 17:15:43.102  INFO 19652 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:15:43.110  INFO 19652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:15:43.111  INFO 19652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:15:43.195  INFO 19652 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:15:43.196  INFO 19652 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1334 ms
+2017-12-28 17:15:43.316  INFO 19652 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:15:43.320  INFO 19652 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:15:43.321  INFO 19652 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:15:43.321  INFO 19652 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:15:43.321  INFO 19652 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:15:43.718  INFO 19652 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:15:43.727  INFO 19652 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:15:43.769  INFO 19652 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:15:43.770  INFO 19652 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:15:43.771  INFO 19652 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:15:43.798  INFO 19652 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:15:43.865  INFO 19652 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:15:44.189  INFO 19652 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:15:44.521  INFO 19652 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:15:41 CST 2017]; root of context hierarchy
+2017-12-28 17:15:44.566  INFO 19652 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:15:44.566  INFO 19652 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:15:44.568  INFO 19652 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:15:44.568  INFO 19652 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:15:44.588  INFO 19652 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:15:44.588  INFO 19652 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:15:44.613  INFO 19652 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:15:44.637  WARN 19652 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:15:44.967  INFO 19652 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:15:45.010  INFO 19652 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:15:45.013  INFO 19652 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 3.562 seconds (JVM running for 4.384)
+2017-12-28 17:15:48.801  INFO 19652 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 17:15:48.801  INFO 19652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 17:15:48.820  INFO 19652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2017-12-28 17:15:49.120  INFO 19652 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-28 17:16:35.360  INFO 18740 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 18740 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:16:35.362 DEBUG 18740 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:16:35.363  INFO 18740 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:16:35.534  INFO 18740 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:16:35 CST 2017]; root of context hierarchy
+2017-12-28 17:16:36.935  INFO 18740 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:16:36.943  INFO 18740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:16:36.944  INFO 18740 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:16:37.044  INFO 18740 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:16:37.045  INFO 18740 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1514 ms
+2017-12-28 17:16:37.207  INFO 18740 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:16:37.211  INFO 18740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:16:37.211  INFO 18740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:16:37.211  INFO 18740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:16:37.212  INFO 18740 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:16:37.640  INFO 18740 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:16:37.649  INFO 18740 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:16:37.699  INFO 18740 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:16:37.700  INFO 18740 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:16:37.701  INFO 18740 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:16:37.732  INFO 18740 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:16:37.805  INFO 18740 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:16:38.171  INFO 18740 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:16:38.527  INFO 18740 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:16:35 CST 2017]; root of context hierarchy
+2017-12-28 17:16:38.576  INFO 18740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:16:38.577  INFO 18740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:16:38.579  INFO 18740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:16:38.579  INFO 18740 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:16:38.601  INFO 18740 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:16:38.601  INFO 18740 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:16:38.626  INFO 18740 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:16:38.653  WARN 18740 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:16:39.063  INFO 18740 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:16:39.114  INFO 18740 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:16:39.117  INFO 18740 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.013 seconds (JVM running for 4.403)
+2017-12-28 17:16:57.063  INFO 18740 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 17:16:57.063  INFO 18740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 17:16:57.091  INFO 18740 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2017-12-28 17:16:57.518  INFO 18740 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-28 17:19:23.414  INFO 21456 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 21456 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:19:23.416 DEBUG 21456 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:19:23.416  INFO 21456 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:19:23.668  INFO 21456 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:19:23 CST 2017]; root of context hierarchy
+2017-12-28 17:19:25.289  INFO 21456 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:19:25.299  INFO 21456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:19:25.300  INFO 21456 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:19:25.415  INFO 21456 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:19:25.416  INFO 21456 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1751 ms
+2017-12-28 17:19:25.567  INFO 21456 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:19:25.572  INFO 21456 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:19:25.573  INFO 21456 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:19:25.573  INFO 21456 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:19:25.573  INFO 21456 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:19:25.991  INFO 21456 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:19:26.003  INFO 21456 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:19:26.052  INFO 21456 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:19:26.053  INFO 21456 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:19:26.054  INFO 21456 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:19:26.085  INFO 21456 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:19:26.157  INFO 21456 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:19:26.537  INFO 21456 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:19:26.918  INFO 21456 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:19:23 CST 2017]; root of context hierarchy
+2017-12-28 17:19:26.975  INFO 21456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:19:26.975  INFO 21456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:19:26.978  INFO 21456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:19:26.978  INFO 21456 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:19:26.998  INFO 21456 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:19:26.998  INFO 21456 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:19:27.025  INFO 21456 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:19:27.055  WARN 21456 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:19:27.441  INFO 21456 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:19:27.496  INFO 21456 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:19:27.502  INFO 21456 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.362 seconds (JVM running for 4.838)
+2017-12-28 17:19:30.882  INFO 21456 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 17:19:30.882  INFO 21456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 17:19:30.901  INFO 21456 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2017-12-28 17:19:31.245  INFO 21456 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-28 17:20:03.133  INFO 21660 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 21660 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:20:03.135 DEBUG 21660 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:20:03.135  INFO 21660 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:20:03.311  INFO 21660 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:20:03 CST 2017]; root of context hierarchy
+2017-12-28 17:20:04.891  INFO 21660 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:20:04.902  INFO 21660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:20:04.903  INFO 21660 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:20:05.007  INFO 21660 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:20:05.008  INFO 21660 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1699 ms
+2017-12-28 17:20:05.164  INFO 21660 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:20:05.167  INFO 21660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:20:05.167  INFO 21660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:20:05.167  INFO 21660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:20:05.167  INFO 21660 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:20:05.598  INFO 21660 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:20:05.608  INFO 21660 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:20:05.652  INFO 21660 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:20:05.653  INFO 21660 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:20:05.654  INFO 21660 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:20:05.684  INFO 21660 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:20:05.760  INFO 21660 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:20:06.126  INFO 21660 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:20:06.500  INFO 21660 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:20:03 CST 2017]; root of context hierarchy
+2017-12-28 17:20:06.554  INFO 21660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:20:06.555  INFO 21660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:20:06.558  INFO 21660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:20:06.558  INFO 21660 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:20:06.581  INFO 21660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:20:06.582  INFO 21660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:20:06.610  INFO 21660 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:20:06.637  WARN 21660 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:20:07.051  INFO 21660 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:20:07.111  INFO 21660 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:20:07.115  INFO 21660 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.262 seconds (JVM running for 4.898)
+2017-12-28 17:20:10.447  INFO 21660 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 17:20:10.448  INFO 21660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 17:20:10.469  INFO 21660 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+2017-12-28 17:20:10.840  INFO 21660 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-28 17:23:51.079  INFO 21352 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 21352 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:23:51.080 DEBUG 21352 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:23:51.081  INFO 21352 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:23:51.242  INFO 21352 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:23:51 CST 2017]; root of context hierarchy
+2017-12-28 17:23:52.777  INFO 21352 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:23:52.788  INFO 21352 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:23:52.788  INFO 21352 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:23:52.880  INFO 21352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:23:52.881  INFO 21352 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1642 ms
+2017-12-28 17:23:53.008  INFO 21352 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:23:53.012  INFO 21352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:23:53.013  INFO 21352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:23:53.013  INFO 21352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:23:53.014  INFO 21352 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:23:53.428  INFO 21352 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:23:53.437  INFO 21352 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:23:53.480  INFO 21352 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:23:53.481  INFO 21352 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:23:53.481  INFO 21352 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:23:53.508  INFO 21352 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:23:53.578  INFO 21352 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:23:53.919  INFO 21352 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:23:54.265  INFO 21352 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:23:51 CST 2017]; root of context hierarchy
+2017-12-28 17:23:54.314  INFO 21352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:23:54.315  INFO 21352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:23:54.316  INFO 21352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:23:54.317  INFO 21352 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:23:54.338  INFO 21352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:23:54.338  INFO 21352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:23:54.364  INFO 21352 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:23:54.391  WARN 21352 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:23:54.753  INFO 21352 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:23:54.800  INFO 21352 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:23:54.804  INFO 21352 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 3.969 seconds (JVM running for 4.548)
+2017-12-28 17:24:03.329  INFO 21352 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 17:24:03.331  INFO 21352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 17:24:03.373  INFO 21352 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2017-12-28 17:24:03.777  INFO 21352 --- [http-nio-8080-exec-3] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-28 17:25:24.550  INFO 22292 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 22292 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:25:24.552 DEBUG 22292 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:25:24.552  INFO 22292 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:25:24.816  INFO 22292 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:25:24 CST 2017]; root of context hierarchy
+2017-12-28 17:25:26.113  INFO 22292 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:25:26.121  INFO 22292 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:25:26.122  INFO 22292 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:25:26.225  INFO 22292 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:25:26.226  INFO 22292 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1413 ms
+2017-12-28 17:25:26.383  INFO 22292 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:25:26.386  INFO 22292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:25:26.387  INFO 22292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:25:26.387  INFO 22292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:25:26.387  INFO 22292 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:25:26.897  INFO 22292 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:25:26.908  INFO 22292 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:25:26.964  INFO 22292 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:25:26.965  INFO 22292 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:25:26.965  INFO 22292 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:25:26.996  INFO 22292 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:25:27.072  INFO 22292 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:25:27.452  INFO 22292 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:25:27.815  INFO 22292 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:25:24 CST 2017]; root of context hierarchy
+2017-12-28 17:25:27.866  INFO 22292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:25:27.867  INFO 22292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:25:27.869  INFO 22292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:25:27.869  INFO 22292 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:25:27.892  INFO 22292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:25:27.892  INFO 22292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:25:27.923  INFO 22292 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:25:27.950  WARN 22292 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:25:28.323  INFO 22292 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:25:28.387  INFO 22292 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:25:28.393  INFO 22292 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.127 seconds (JVM running for 4.701)
+2017-12-28 17:25:31.020  INFO 22292 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 17:25:31.021  INFO 22292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 17:25:31.043  INFO 22292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2017-12-28 17:25:31.472  INFO 22292 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-28 17:27:34.678  INFO 21684 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 21684 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:27:34.681 DEBUG 21684 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:27:34.682  INFO 21684 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:27:34.899  INFO 21684 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:27:34 CST 2017]; root of context hierarchy
+2017-12-28 17:27:36.507  INFO 21684 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:27:36.519  INFO 21684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:27:36.520  INFO 21684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:27:36.643  INFO 21684 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:27:36.643  INFO 21684 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1749 ms
+2017-12-28 17:27:36.799  INFO 21684 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:27:36.802  INFO 21684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:27:36.803  INFO 21684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:27:36.803  INFO 21684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:27:36.804  INFO 21684 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:27:37.228  INFO 21684 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:27:37.242  INFO 21684 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:27:37.294  INFO 21684 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:27:37.295  INFO 21684 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:27:37.296  INFO 21684 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:27:37.333  INFO 21684 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:27:37.412  INFO 21684 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:27:37.788  INFO 21684 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:27:38.241  INFO 21684 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:27:34 CST 2017]; root of context hierarchy
+2017-12-28 17:27:38.301  INFO 21684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:27:38.302  INFO 21684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:27:38.303  INFO 21684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:27:38.303  INFO 21684 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:27:38.328  INFO 21684 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:27:38.329  INFO 21684 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:27:38.359  INFO 21684 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:27:38.389  WARN 21684 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:27:38.796  INFO 21684 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:27:38.851  INFO 21684 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:27:38.854  INFO 21684 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.446 seconds (JVM running for 4.887)
+2017-12-28 17:27:53.873  INFO 21684 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 17:27:53.873  INFO 21684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 17:27:53.891  INFO 21684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2017-12-28 17:27:54.296  INFO 21684 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-12-28 17:29:20.232  INFO 21368 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 21368 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:29:20.235 DEBUG 21368 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:29:20.235  INFO 21368 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:29:20.443  INFO 21368 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:29:20 CST 2017]; root of context hierarchy
+2017-12-28 17:29:22.081  INFO 21368 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:29:22.091  INFO 21368 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:29:22.092  INFO 21368 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:29:22.210  INFO 21368 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:29:22.211  INFO 21368 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1774 ms
+2017-12-28 17:29:22.360  INFO 21368 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:29:22.365  INFO 21368 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:29:22.367  INFO 21368 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:29:22.368  INFO 21368 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:29:22.368  INFO 21368 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:29:22.822  INFO 21368 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:29:22.831  INFO 21368 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:29:22.878  INFO 21368 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:29:22.879  INFO 21368 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:29:22.880  INFO 21368 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:29:22.911  INFO 21368 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:29:22.989  INFO 21368 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:29:23.417  INFO 21368 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:29:23.842  INFO 21368 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:29:20 CST 2017]; root of context hierarchy
+2017-12-28 17:29:23.903  INFO 21368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:29:23.904  INFO 21368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:29:23.905  INFO 21368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:29:23.906  INFO 21368 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:29:23.930  INFO 21368 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:29:23.930  INFO 21368 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:29:23.959  INFO 21368 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:29:23.987  WARN 21368 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:29:24.403  INFO 21368 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:29:24.465  INFO 21368 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:29:24.468  INFO 21368 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.56 seconds (JVM running for 4.992)
+2017-12-28 17:30:36.427  INFO 21724 --- [main] com.example.webDemo.WebDemoApplication   : Starting WebDemoApplication on VMR2ALSVG0A5VFE with PID 21724 (D:\workspace\web-demo\webDemo\target\classes started by Administrator in D:\workspace\web-demo\webDemo)
+2017-12-28 17:30:36.429 DEBUG 21724 --- [main] com.example.webDemo.WebDemoApplication   : Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-12-28 17:30:36.430  INFO 21724 --- [main] com.example.webDemo.WebDemoApplication   : No active profile set, falling back to default profiles: default
+2017-12-28 17:30:36.902  INFO 21724 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:30:36 CST 2017]; root of context hierarchy
+2017-12-28 17:30:38.269  INFO 21724 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-12-28 17:30:38.277  INFO 21724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-12-28 17:30:38.278  INFO 21724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-28 17:30:38.381  INFO 21724 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-12-28 17:30:38.381  INFO 21724 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1484 ms
+2017-12-28 17:30:38.529  INFO 21724 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-28 17:30:38.531  INFO 21724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-28 17:30:38.532  INFO 21724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-28 17:30:38.532  INFO 21724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-28 17:30:38.532  INFO 21724 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-28 17:30:38.941  INFO 21724 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:30:38.950  INFO 21724 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-12-28 17:30:38.997  INFO 21724 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-12-28 17:30:38.998  INFO 21724 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-12-28 17:30:38.999  INFO 21724 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-12-28 17:30:39.029  INFO 21724 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-12-28 17:30:39.098  INFO 21724 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-12-28 17:30:39.465  INFO 21724 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-12-28 17:30:39.826  INFO 21724 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@27c86f2d: startup date [Thu Dec 28 17:30:36 CST 2017]; root of context hierarchy
+2017-12-28 17:30:39.884  INFO 21724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index],methods=[GET]}" onto public java.lang.String com.example.webDemo.controller.IndexController.index(org.springframework.ui.Model)
+2017-12-28 17:30:39.885  INFO 21724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goods],methods=[GET]}" onto public java.lang.Object com.example.webDemo.controller.IndexController.findAllGoods(int,int)
+2017-12-28 17:30:39.887  INFO 21724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-28 17:30:39.888  INFO 21724 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-28 17:30:39.913  INFO 21724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:30:39.913  INFO 21724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:30:39.939  INFO 21724 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-28 17:30:39.966  WARN 21724 --- [main] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2017-12-28 17:30:40.340  INFO 21724 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-12-28 17:30:40.390  INFO 21724 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-12-28 17:30:40.394  INFO 21724 --- [main] com.example.webDemo.WebDemoApplication   : Started WebDemoApplication in 4.229 seconds (JVM running for 4.913)
+2017-12-28 17:30:46.270  INFO 21724 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-28 17:30:46.270  INFO 21724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-12-28 17:30:46.288  INFO 21724 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2017-12-28 17:30:46.685  INFO 21724 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory

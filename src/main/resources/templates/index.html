@@ -8,6 +8,38 @@
 </head>
 <body>
 
+<div id="daohang">
+    <ul class="layui-nav" lay-filter="demo">
+        <li class="layui-nav-item"><a href="">最新活动</a></li>
+        <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+        <li class="layui-nav-item"><a href="">大数据</a></li>
+        <li class="layui-nav-item">
+            <a href="javascript:;">解决方案</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="">移动模块</a></dd>
+                <dd><a href="">后台模版</a></dd>
+                <dd><a href="">电商平台</a></dd>
+            </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+
+            <li class="layui-nav-item">
+                <a href="">控制台<span class="layui-badge">9</span></a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="">个人中心<span class="layui-badge-dot"></span></a>
+            </li>
+            <li class="layui-nav-item">
+                <a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">我</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">修改信息</a></dd>
+                    <dd><a href="javascript:;">安全管理</a></dd>
+                    <dd><a href="javascript:;">退了</a></dd>
+                </dl>
+            </li>
+    </ul>
+</div>
+
 <div class="layui-form">
     <table class="layui-table">
         <colgroup>
@@ -37,18 +69,24 @@
 <script src="/layui/layui.js"></script>
 <script type="text/javascript">
     //一般直接写在一个js文件中
-    layui.use(['jquery', 'laypage', 'layer'], function () {
+    layui.use(['jquery', 'laypage', 'layer', 'element'], function () {
         var $ = layui.$ //重点处
             , layer = layui.layer;
         var laypage = layui.laypage;
 
         layer.msg('Hello World');
+        var element = layui.element;
+
+        //一些事件监听
+        element.on('tab(demo)', function (data) {
+            console.log(data);
+        });
         //后面就跟你平时使用jQuery一样
         pager();
         function pager(curr, size) {
             var data = {
                 page: curr || 1,
-                size: size || 10
+                size: size || 10,
             };
             $.getJSON('/page/goods', data, function (res) {
                 var goodsList = $("#tableContent").empty();

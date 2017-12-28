@@ -23,14 +23,12 @@ public class IndexController {
 
     @GetMapping("/index")
     public String index(Model model) {
-        model.addAttribute("goodsList", goodsService.findGoods());
         return "index";
     }
 
     @GetMapping("/page/goods")
     @ResponseBody
     public Object findAllGoods(@RequestParam(value = "page") int page, @RequestParam(value = "size", defaultValue = "10") int size) {
-        log.debug("pageNum=={}", page);
         PageRequest request = new PageRequest(page - 1, size, new Sort(Sort.Direction.ASC, "id"));
         return goodsService.findPageGoods(request);
     }
