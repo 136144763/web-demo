@@ -32,5 +32,4 @@ public class IndexController {
         PageRequest request = new PageRequest(page - 1, size, new Sort(Sort.Direction.ASC, "id"));
         return goodsService.findPageGoods(request);
     }
-
 }
