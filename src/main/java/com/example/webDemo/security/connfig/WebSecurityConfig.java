@@ -14,6 +14,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 @Configuration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    final static String[] ignore={
+            "/images/**",
+    };
+
     @Autowired
     LoginSuccessHandler loginSuccessHandler;
 
@@ -30,6 +34,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .antMatchers(ignore).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
