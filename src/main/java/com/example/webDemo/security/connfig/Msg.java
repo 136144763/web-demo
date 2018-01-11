@@ -1,4 +1,4 @@
-package com.example.webDemo.security;
+package com.example.webDemo.security.connfig;
 
 import lombok.Data;
 

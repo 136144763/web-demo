@@ -1,4 +1,4 @@
-package com.example.webDemo.security;
+package com.example.webDemo.security.connfig;
 
 import com.example.webDemo.security.model.SysUser;
 import org.springframework.data.jpa.repository.JpaRepository;

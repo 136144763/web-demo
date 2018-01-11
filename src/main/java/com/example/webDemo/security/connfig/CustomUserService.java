@@ -1,4 +1,4 @@
-package com.example.webDemo.security;
+package com.example.webDemo.security.connfig;
 
 import com.example.webDemo.security.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
@@ -22,8 +22,8 @@ public class CustomUserService implements UserDetailsService {
         if (sysUser == null) {
             throw new UsernameNotFoundException("用户名不存在");
         }
-        log.info("s={}", s);
-        log.info("username={},password={}", sysUser.getUsername(), sysUser.getPassword());
+        log.debug("s={}", s);
+        log.debug("username={},password={}", sysUser.getUsername(), sysUser.getPassword());
         return sysUser;
     }
 }

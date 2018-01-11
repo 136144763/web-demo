@@ -1,4 +1,4 @@
-package com.example.webDemo.security;
+package com.example.webDemo.security.connfig;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
