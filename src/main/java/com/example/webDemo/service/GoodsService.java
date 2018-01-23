@@ -18,11 +18,6 @@ public class GoodsService {
     @Autowired
     GoodsRepository goodsRepository;
 
-    public List<Goods> findGoods(){
-        List<Goods> lists=goodsRepository.findAll();
-        return lists;
-    }
-
     public Page<Goods> findPageGoods(PageRequest pageRequest){
         return goodsRepository.findAll(pageRequest);
     }
