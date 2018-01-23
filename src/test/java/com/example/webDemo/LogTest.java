@@ -1,5 +1,6 @@
 package com.example.webDemo;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -11,23 +12,24 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * Created by Administrator on 2018/1/23.
  */
+@Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class LogTest {
-    private static Logger log = LoggerFactory.getLogger(LogTest.class);
+    private static Logger logger = LoggerFactory.getLogger(LogTest.class);
 
     @Test
     public void testLog() {
-        log.trace("======trace");
-        log.debug("======debug");
-        log.info("======info");
-        log.warn("======warn");
-        log.error("======error");
+        logger.trace("======trace");
+        logger.debug("======debug");
+        logger.info("======info");
+        logger.warn("======warn");
+        logger.error("======error");
         try {
             int[] counts = {1, 2};
-            log.debug("", counts[2]);
+            logger.debug("", counts[2]);
         } catch (Exception e) {
-            log.error("", e);
+            logger.error("", e);
             log.info(MarkerFactory.getMarker("errMailer"), e.getMessage());
         }
     }

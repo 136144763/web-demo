@@ -5,11 +5,11 @@
 
     <!--<property name="smtpHost" value="smtp.126.com"/>-->
     <!--<property name="smtpPort" value="25"/>-->
-    <!--<property name="username" value="luo4545@126.com"/>-->
+    <!--<property name="email_from" value="luo4545@126.com"/>-->
+    <!--<property name="username" value="luo4545"/>-->
     <!--<property name="password" value="luo4545"/>-->
-    <!--<property name="SSL" value="true"/>-->
+    <!--<property name="SSL" value="false"/>-->
     <!--<property name="email_to" value="luofei@huianrong.com"/>-->
-    <!--<property name="email_from" value="logmonitor" />-->
     <!--<property name="email_subject" value="【Error】: %logger - %msg " />-->
     <!--<appender name="EMAILTO" class="ch.qos.logback.classic.net.SMTPAppender">-->
     <!--<evaluator class="ch.qos.logback.classic.boolex.OnMarkerEvaluator">-->
@@ -45,7 +45,7 @@
     <property name="email_to" value="luofei@huianrong.com"/>
     <property name="password" value="luo4545"/>
     <property name="SSL" value="false" />
-    <property name="email_subject" value="元数据警告"/>
+    <property name="email_subject" value="处理页面数据异常"/>
     <appender name="errMailer" class="ch.qos.logback.classic.net.SMTPAppender">
         <smtpHost>${smtpHost}</smtpHost>
         <smtpPort>${smtpPort}</smtpPort>
@@ -60,6 +60,10 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>ERROR</level>
         </filter>
+        <cyclicBufferTracker class="ch.qos.logback.core.spi.CyclicBufferTracker">
+            <!-- 每个电子邮件只发一个日志条目 -->
+            <bufferSize>1</bufferSize>
+        </cyclicBufferTracker>
     </appender>
     <root level="info">
         <appender-ref ref="errMailer"/>
