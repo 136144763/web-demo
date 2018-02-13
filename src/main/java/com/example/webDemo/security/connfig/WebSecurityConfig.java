@@ -15,7 +15,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     final static String[] ignore={
-            "/images/**",
+            "/img/**",
     };
 
     @Autowired

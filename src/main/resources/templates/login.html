@@ -6,19 +6,20 @@
     <link rel="stylesheet" th:href="@{css/bootstrap.min.css}"/>
     <style type="text/css">
         body {
+            background-image: url("/img/loginbg.png");
             padding-top: 50px;
         }
 
         .starter-template {
             padding: 40px 15px;
             text-align: center;
-            background: #0886ea url(../img/loginbg.png) no-repeat center top;
         }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="starter-template">
+        <!--<img th:src="@{/img/loginbg.png}" src="../static/img/loginbg.png">-->
         <p th:if="${param.logout}" class="bg-warning">已注销</p>
         <p th:if="${param.error}" class="bg-danger">有错误，请重试</p>
         <h2>使用账号密码登录</h2>
