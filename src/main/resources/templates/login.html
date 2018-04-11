@@ -7,7 +7,8 @@
     <style type="text/css">
         body {
             background-image: url("/img/loginbg.png");
-            padding-top: 50px;
+            background-repeat: no-repeat;
+            background-size: 100%;
         }
 
         .starter-template {
@@ -31,6 +32,11 @@
             <div class="form-group">
                 <label>密码</label>
                 <input type="password" class="form-control" name="password" placeholder="密码"/>
+            </div>
+            <div class="form-group">
+                <label>验证码</label>
+                <div><img src="/getVerify"></div>
+                <input type="text" class="form-control" name="verificationCode" placeholder="验证码"/>
             </div>
             <input type="submit" id="login" value="Login" class="btn btn-primary"/>
         </form>

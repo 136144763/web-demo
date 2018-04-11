@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +26,7 @@ public class IndexController {
     GoodsService goodsService;
 
     @GetMapping("/index")
-    public String index(Model model) {
+    public String index() {
         return "index";
     }
 
@@ -39,9 +38,8 @@ public class IndexController {
     }
 
 
+    final static String articleUrl = "http://blog.csdn.net/Colton_Null/article/details/78744240";
 
-
-    final static String articleUrl="http://blog.csdn.net/Colton_Null/article/details/78744240";
     /**
      * 生成验证码
      */
@@ -49,12 +47,15 @@ public class IndexController {
     @RequestMapping(value = "/getVerify")
     public void getVerify(HttpServletRequest request, HttpServletResponse response) {
         try {
-            response.setContentType("image/jpeg");//设置相应类型,告诉浏览器输出的内容为图片
-            response.setHeader("Pragma", "No-cache");//设置响应头信息，告诉浏览器不要缓存此内容
+            //设置相应类型,告诉浏览器输出的内容为图片
+            response.setContentType("image/jpeg");
+            //设置响应头信息，告诉浏览器不要缓存此内容
+            response.setHeader("Pragma", "No-cache");
             response.setHeader("Cache-Control", "no-cache");
             response.setDateHeader("Expire", 0);
             PictureValidation randomValidateCode = new PictureValidation();
-            randomValidateCode.getRandcode(request, response);//输出验证码图片方法
+            //输出验证码图片方法
+            randomValidateCode.getRandcode(request, response);
         } catch (Exception e) {
             log.error("获取验证码失败>>>>   ", e);
         }
