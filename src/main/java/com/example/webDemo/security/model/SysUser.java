@@ -23,8 +23,6 @@ public class SysUser implements UserDetails {
 
     private String password;
 
-    private String verificationCode;
-
     @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.EAGER)
     private List<SysUser> roles;
 
@@ -40,10 +38,6 @@ public class SysUser implements UserDetails {
 
     public List<SysUser> getRoles() {
         return roles;
-    }
-
-    public String getVerificationCode() {
-        return verificationCode;
     }
 
     @Override

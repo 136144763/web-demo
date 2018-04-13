@@ -39,11 +39,19 @@ public class JdbcTest {
 
     @Test
     public void test() {
-        Page<Goods> goodsList=goodsService.findPageGoods(new PageRequest(1,15));
-        log.debug("goodsList=={}",goodsList.getTotalPages());
-        for (Goods goods:goodsList){
-            log.debug("goods=={}",goods);
+        Page<Goods> goodsList = goodsService.findPageGoods(new PageRequest(1, 15));
+        log.debug("goodsList=={}", goodsList.getTotalPages());
+        for (Goods goods : goodsList) {
+            log.debug("goods=={}", goods);
         }
+    }
+
+    @Test
+    public void test111() {
+        float x = 1;
+        float y = 2;
+        float z = 3;
+        log.info("num={}", y += z-- / ++x);
     }
 
 

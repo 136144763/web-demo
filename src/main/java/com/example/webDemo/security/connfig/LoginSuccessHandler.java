@@ -32,7 +32,6 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         log.info("validation={}",validation);
 
         SysUser sysUser = sysUserRepository.findByUsername(authentication.getName());
-        log.info("verificationCode={}",sysUser.getVerificationCode());
         request.getSession().setAttribute("username", sysUser.getUsername());
         String url=request.getRequestURI();
         if(!url.isEmpty()){
