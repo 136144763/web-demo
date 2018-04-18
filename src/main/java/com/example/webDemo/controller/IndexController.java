@@ -1,6 +1,5 @@
 package com.example.webDemo.controller;
 
-import com.example.webDemo.security.validation.PictureValidation;
 import com.example.webDemo.service.GoodsService;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
@@ -47,14 +45,15 @@ public class IndexController {
     }
 
 
+    //在你的html中 <img src="/kaptcha" /> 验证码就出来了
     @RequestMapping("/kaptcha")
-    public void defaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception{
-        byte[] captchaChallengeAsJpeg = null;
+    public void defaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
+        byte[] captchaChallengeAsJpeg;
         ByteArrayOutputStream jpegOutputStream = new ByteArrayOutputStream();
         try {
             //生产验证码字符串并保存到session中
             String createText = defaultKaptcha.createText();
-            log.info("vrifyCode={}",createText);
+            log.info("vrifyCode={}", createText);
             httpServletRequest.getSession().setAttribute("vrifyCode", createText);
             //使用生产的验证码字符串返回一个BufferedImage对象并转为byte写入到byte数组中
             BufferedImage challenge = defaultKaptcha.createImage(createText);
@@ -75,30 +74,6 @@ public class IndexController {
         responseOutputStream.flush();
         responseOutputStream.close();
     }
-//在你的html中 <img src="/kaptcha" /> 验证码就出来了
 
-
-    final static String articleUrl = "http://blog.csdn.net/Colton_Null/article/details/78744240";
-
-    /**
-     * 生成验证码
-     */
-    //TODO 图片验证
-    @RequestMapping(value = "/getVerify")
-    public void getVerify(HttpServletRequest request, HttpServletResponse response) {
-        try {
-            //设置相应类型,告诉浏览器输出的内容为图片
-            response.setContentType("image/jpeg");
-            //设置响应头信息，告诉浏览器不要缓存此内容
-            response.setHeader("Pragma", "No-cache");
-            response.setHeader("Cache-Control", "no-cache");
-            response.setDateHeader("Expire", 0);
-            PictureValidation randomValidateCode = new PictureValidation();
-            //输出验证码图片方法
-            randomValidateCode.getRandcode(request, response);
-        } catch (Exception e) {
-            log.error("获取验证码失败>>>>   ", e);
-        }
-    }
 
 }
