@@ -28,7 +28,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         log.info("url={}", request.getRequestURI());
         String imageCode = request.getParameter("imageCode");
-        String validation = (String) request.getSession().getAttribute(RANDOMCODEKEY);
+        String validation = (String) request.getSession().getAttribute("vrifyCode");
         log.info("imageCode={}", request.getParameter("imageCode"));
         log.info("validation={}", validation);
 

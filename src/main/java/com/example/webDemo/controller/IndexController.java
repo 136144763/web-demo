@@ -54,6 +54,7 @@ public class IndexController {
         try {
             //生产验证码字符串并保存到session中
             String createText = defaultKaptcha.createText();
+            log.info("vrifyCode={}",createText);
             httpServletRequest.getSession().setAttribute("vrifyCode", createText);
             //使用生产的验证码字符串返回一个BufferedImage对象并转为byte写入到byte数组中
             BufferedImage challenge = defaultKaptcha.createImage(createText);
@@ -76,25 +77,6 @@ public class IndexController {
     }
 //在你的html中 <img src="/kaptcha" /> 验证码就出来了
 
-
-
-    @RequestMapping("/imgvrifyControllerDefaultKaptcha")
-    public ModelAndView imgvrifyControllerDefaultKaptcha(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse){
-        ModelAndView andView = new ModelAndView();
-        String captchaId = (String) httpServletRequest.getSession().getAttribute("vrifyCode");
-        String parameter = httpServletRequest.getParameter("vrifyCode");
-        System.out.println("Session  vrifyCode "+captchaId+" form vrifyCode "+parameter);
-
-        if (!captchaId.equals(parameter)) {
-            andView.addObject("info", "错误的验证码");
-            andView.setViewName("login");
-        } else {
-            andView.addObject("info", "登录成功");
-            andView.setViewName("index");
-
-        }
-        return andView;
-    }
 
     final static String articleUrl = "http://blog.csdn.net/Colton_Null/article/details/78744240";
 

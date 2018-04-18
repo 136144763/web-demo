@@ -37,7 +37,7 @@ public class CaptchaProperties {
         //验证码文本字体样式  默认为new Font("Arial", 1, fontSize), new Font("Courier", 1, fontSize)
         properties.setProperty("kaptcha.textproducer.font.names", "微软雅黑");
         //验证码文本字符内容范围  默认为abcde2345678gfynmnpwx
-        properties.setProperty("kaptcha.textproducer.char.string", "1234567890");
+        properties.setProperty("kaptcha.textproducer.char.string", "abcdefghijklmnopqrstuvwxyz0123456789");
         //验证码文本字符间距  默认为2
         properties.setProperty("kaptcha.textproducer.char.space", "6");
         //验证码背景颜色渐进 开始   默认为Color.LIGHT_GRAY
