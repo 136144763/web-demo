@@ -26,16 +26,19 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-        log.info("LoginSuccessHandle\t {},{},{}", authentication.getPrincipal(), request, response);
         log.info("url={}", request.getRequestURI());
-        String validation= (String) request.getSession().getAttribute(RANDOMCODEKEY);
-        log.info("validation={}",validation);
+        String imageCode = request.getParameter("imageCode");
+        String validation = (String) request.getSession().getAttribute(RANDOMCODEKEY);
+        log.info("imageCode={}", request.getParameter("imageCode"));
+        log.info("validation={}", validation);
 
         SysUser sysUser = sysUserRepository.findByUsername(authentication.getName());
         request.getSession().setAttribute("username", sysUser.getUsername());
-        String url=request.getRequestURI();
-        if(!url.isEmpty()){
+        String url = request.getRequestURI();
+        if (imageCode.equalsIgnoreCase(validation) && !url.isEmpty()) {
             response.sendRedirect("/index");
+        }else {
+            response.sendRedirect("/login?error");
         }
     }
 }
