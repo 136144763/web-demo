@@ -116,12 +116,12 @@
             <version>2.3.2</version>
         </dependency>
 
-        <!-- bootstrap-admin依赖 -->
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>ace-bootstrap-admin-template</artifactId>
-            <version>1.4.2</version>
-        </dependency>
+        <!--&lt;!&ndash; bootstrap-admin依赖 &ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.webjars</groupId>-->
+            <!--<artifactId>ace-bootstrap-admin-template</artifactId>-->
+            <!--<version>1.4.2</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
