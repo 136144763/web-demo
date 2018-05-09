@@ -19,7 +19,6 @@ import java.io.UnsupportedEncodingException;
 @RestController
 public class AlipayResource {
 
-
     @ApiOperation(value = "获取支付宝授权URL", notes = "客户端直接获取该URL做跳转")
     @ResponseBody
     @GetMapping("/auth")
