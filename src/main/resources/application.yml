@@ -14,3 +14,7 @@ server:
 spring:
   datasource:
     initialize: false
+swagger:
+  title: 接口文档
+  base-package: com.example.webDemo.api
+
