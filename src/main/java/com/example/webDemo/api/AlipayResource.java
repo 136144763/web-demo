@@ -26,4 +26,7 @@ public class AlipayResource {
     public String auth() throws UnsupportedEncodingException {
         return "";
     }
+
+
+
 }
