@@ -54,5 +54,10 @@ public class JdbcTest {
         log.info("num={}", y += z-- / ++x);
     }
 
+    @Test
+    public void gitTest(){
+
+    }
+
 
 }
