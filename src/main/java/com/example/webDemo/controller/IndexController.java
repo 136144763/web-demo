@@ -37,6 +37,11 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/bootLogin")
+    public String bootLogin() {
+        return "bootLogin";
+    }
+
     @GetMapping("/page/goods")
     @ResponseBody
     public Object findAllGoods(@RequestParam(value = "page") int page, @RequestParam(value = "size", defaultValue = "10") int size) {
