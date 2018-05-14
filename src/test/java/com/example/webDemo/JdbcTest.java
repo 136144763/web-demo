@@ -1,13 +1,13 @@
 package com.example.webDemo;
 
-import cn.binarywang.tools.generator.ChineseIDCardNumberGenerator;
 import com.example.webDemo.domain.Customer;
 import com.example.webDemo.domain.Goods;
 import com.example.webDemo.repository.CustomerRepository;
 import com.example.webDemo.repository.GoodsRepository;
 import com.example.webDemo.service.GoodsService;
-import jdk.internal.org.objectweb.asm.commons.GeneratorAdapter;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +16,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.persistence.Table;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by Administrator on 2017/11/23.
@@ -38,10 +38,22 @@ public class JdbcTest {
     CustomerRepository customerRepository;
 
     @Test
-    public void testInsert(){
-        Customer customer=new Customer();
-        customer.setIdCard(ChineseIDCardNumberGenerator.getInstance().generate());
+    public void testInsert() {
+        List<Customer> customers = customerRepository.findAll();
+        for (Customer customer : customers) {
+            customer.setAccount(RandomStringUtils.randomAlphanumeric(10));
+        }
+    }
 
+
+    @Test
+    public void testGenerator() {
+        String account = RandomStringUtils.randomAlphanumeric(10);
+        log.info("account={}", account);
+        String password = "123456";
+        String salt = UUID.randomUUID().toString().substring(0,5);
+        log.info("salt={}", salt);
+        log.info("account={}", DigestUtils.md5Hex(password));
     }
 
     @Test
@@ -70,7 +82,7 @@ public class JdbcTest {
     }
 
     @Test
-    public void gitTest(){
+    public void gitTest() {
 
     }
 

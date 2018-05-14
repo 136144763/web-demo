@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Customer {
 
     @Id
-    public Long userId;
+    public int userId;
 
     public String idCard;
 
@@ -26,5 +26,11 @@ public class Customer {
     public String adress;
 
     public String phoneNum;
+
+    public String account;
+
+    public String password;
+
+    public String email;
 
 }
