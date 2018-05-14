@@ -70,6 +70,8 @@
                                     <div class="space-6"></div>
 
                                     <form role="from" name="from" th:action="@{/login}" action="/login" method="post">
+                                        <p th:if="${param.logout}" class="bg-warning">已注销</p>
+                                        <p th:if="${param.error}" class="bg-danger">有错误，请重试</p>
                                         <fieldset>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">

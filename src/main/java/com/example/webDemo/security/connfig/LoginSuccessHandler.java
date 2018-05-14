@@ -38,7 +38,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         if (imageCode.equalsIgnoreCase(validation) && !url.isEmpty()) {
             response.sendRedirect("/index");
         }else {
-            response.sendRedirect("/login?error");
+            response.sendRedirect("/bootLogin?error");
         }
     }
 }
