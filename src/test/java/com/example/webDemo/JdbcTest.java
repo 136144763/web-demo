@@ -1,8 +1,12 @@
 package com.example.webDemo;
 
+import cn.binarywang.tools.generator.ChineseIDCardNumberGenerator;
+import com.example.webDemo.domain.Customer;
 import com.example.webDemo.domain.Goods;
+import com.example.webDemo.repository.CustomerRepository;
 import com.example.webDemo.repository.GoodsRepository;
 import com.example.webDemo.service.GoodsService;
+import jdk.internal.org.objectweb.asm.commons.GeneratorAdapter;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,6 +16,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.persistence.Table;
 import java.util.List;
 
 /**
@@ -28,6 +33,16 @@ public class JdbcTest {
 
     @Autowired
     GoodsService goodsService;
+
+    @Autowired
+    CustomerRepository customerRepository;
+
+    @Test
+    public void testInsert(){
+        Customer customer=new Customer();
+        customer.setIdCard(ChineseIDCardNumberGenerator.getInstance().generate());
+
+    }
 
     @Test
     public void testJdbc() {
