@@ -1,5 +1,6 @@
 package com.example.webDemo;
 
+import cn.binarywang.tools.generator.EmailAddressGenerator;
 import com.example.webDemo.domain.Customer;
 import com.example.webDemo.domain.Goods;
 import com.example.webDemo.repository.CustomerRepository;
@@ -41,7 +42,11 @@ public class JdbcTest {
     public void testInsert() {
         List<Customer> customers = customerRepository.findAll();
         for (Customer customer : customers) {
-            customer.setAccount(RandomStringUtils.randomAlphanumeric(10));
+            String account=RandomStringUtils.randomAlphanumeric(10);
+            customer.setAccount(account);
+            customer.setPassword(DigestUtils.md5Hex(account));
+            customer.setEmail(EmailAddressGenerator.getInstance().generate());
+            customerRepository.save(customer);
         }
     }
 
@@ -50,7 +55,7 @@ public class JdbcTest {
     public void testGenerator() {
         String account = RandomStringUtils.randomAlphanumeric(10);
         log.info("account={}", account);
-        String password = "123456";
+        String password = "uOJK5X6W7N";
         String salt = UUID.randomUUID().toString().substring(0,5);
         log.info("salt={}", salt);
         log.info("account={}", DigestUtils.md5Hex(password));
