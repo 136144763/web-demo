@@ -16,7 +16,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     final static String[] ignore={
             "/img/**","/getVerify","/kaptcha","/alipay"
-            ,"/swagger-ui.html","/webjars/**","/bootLogin"
+            ,"/swagger-ui.html","/webjars/**","/bootLogin/**"
             ,"/assets/**","/login/**",
     };
 
