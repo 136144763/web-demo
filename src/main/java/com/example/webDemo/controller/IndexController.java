@@ -42,6 +42,11 @@ public class IndexController {
         return "bootLogin";
     }
 
+    @GetMapping("/testPDF")
+    public String testPDF() {
+        return "testPDF";
+    }
+
     @GetMapping("/page/goods")
     @ResponseBody
     public Object findAllGoods(@RequestParam(value = "page") int page, @RequestParam(value = "size", defaultValue = "10") int size) {
