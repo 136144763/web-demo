@@ -7,6 +7,7 @@ import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
@@ -34,6 +35,9 @@ public class IndexController {
     @Autowired
     DefaultKaptcha defaultKaptcha;
 
+    @Value("${pdf.dwon}")
+    String pdfLocation;
+
     @GetMapping("/index")
     public String index() {
         return "index";
@@ -58,8 +62,8 @@ public class IndexController {
 
 
     @RequestMapping("/down")
-    public void down(HttpServletResponse httpServletResponse){
-        download("/pdf/1.pdf",httpServletResponse);
+    public void down(HttpServletResponse httpServletResponse) {
+        download(pdfLocation, httpServletResponse);
     }
 
     public HttpServletResponse download(String path, HttpServletResponse response) {
@@ -69,13 +73,13 @@ public class IndexController {
             String ext = StringUtils.substringAfter(fileName, ".").toUpperCase();
 
             InputStream fis = new BufferedInputStream(new FileInputStream(path));
-            byte[] buffer=new byte[fis.available()];
+            byte[] buffer = new byte[fis.available()];
             fis.read(buffer);
             fis.close();
             response.reset();
-            response.addHeader("Content-Disposition","attachment;filename="+new String(fileName.getBytes()));
-            response.addHeader("Content-Length",""+file.length());
-            OutputStream toClient=new BufferedOutputStream(response.getOutputStream());
+            response.addHeader("Content-Disposition", "attachment;filename=" + new String(fileName.getBytes()));
+            response.addHeader("Content-Length", "" + file.length());
+            OutputStream toClient = new BufferedOutputStream(response.getOutputStream());
             response.setContentType("application/octet-stream");
             toClient.write(buffer);
             toClient.flush();
