@@ -18,4 +18,8 @@ spring:
 swagger:
   title: 接口文档
   base-package: com.example.webDemo.api
+logging:
+  level: debug
+  file: logs/demo.log
+
 
