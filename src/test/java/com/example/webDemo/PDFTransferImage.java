@@ -12,10 +12,7 @@ import org.icepdf.core.util.GraphicsRenderingHints;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.RenderedImage;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +25,7 @@ public class PDFTransferImage {
     public void testPDF2IMGTest() {
         String filePath = "D:/pdftest/1.pdf";
         Document document = new Document();
+
 
         try {
             document.setFile(filePath);
@@ -134,9 +132,6 @@ public class PDFTransferImage {
             e.printStackTrace();
         }
     }
-
-
-
 
 
 }

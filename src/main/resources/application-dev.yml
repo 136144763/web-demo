@@ -23,6 +23,6 @@ logging:
   file: logs/demo.log
 
 #pdf文件位置
-pdf.dwon: /root/web-demo/pdf
+pdf.dwon: /root/web-demo/pdf/1.pdf
 
 
