@@ -4,6 +4,7 @@ import com.example.webDemo.service.GoodsService;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.tomcat.util.http.fileupload.ByteArrayOutputStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -18,6 +19,7 @@ import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
+import java.io.*;
 
 /**
  * Created by Administrator on 2017/11/24.
@@ -52,6 +54,63 @@ public class IndexController {
     public Object findAllGoods(@RequestParam(value = "page") int page, @RequestParam(value = "size", defaultValue = "10") int size) {
         PageRequest request = new PageRequest(page - 1, size, new Sort(Sort.Direction.ASC, "id"));
         return goodsService.findPageGoods(request);
+    }
+
+
+
+    @RequestMapping("/down")
+    public void down(HttpServletResponse httpServletResponse){
+        download("D:\\workspace\\web-demo\\src\\main\\resources\\static\\pdf\\1.pdf",httpServletResponse);
+    }
+
+    @RequestMapping("/down/file")
+    public void downFile(HttpServletResponse httpServletResponse) throws Exception {
+        downloadFile("D:\\workspace\\web-demo\\src\\main\\resources\\static\\pdf","1.pdf",httpServletResponse);
+    }
+
+    public HttpServletResponse download(String path, HttpServletResponse response) {
+        try {
+            File file = new File(path);
+            String fileName = file.getName();
+            String ext = StringUtils.substringAfter(fileName, ".").toUpperCase();
+
+            InputStream fis = new BufferedInputStream(new FileInputStream(path));
+            byte[] buffer=new byte[fis.available()];
+            fis.read(buffer);
+            fis.close();
+            response.reset();
+            response.addHeader("Content-Disposition","attachment;filename="+new String(fileName.getBytes()));
+            response.addHeader("Content-Length",""+file.length());
+            OutputStream toClient=new BufferedOutputStream(response.getOutputStream());
+            response.setContentType("application/octet-stream");
+            toClient.write(buffer);
+            toClient.flush();
+            toClient.close();
+        } catch (Exception e) {
+            log.warn("", e);
+        }
+
+        return response;
+    }
+
+    public void downloadFile(String filePath,String fileName,HttpServletResponse response) throws Exception{
+        File file = new File(filePath);
+        // 清空response
+        response.reset();
+        // 设置response的Header
+        // 转码之后下载的文件不会出现中文乱码
+        response.addHeader("Content-Disposition", "attachment;filename=" + new String(fileName.getBytes("gbk"), "iso-8859-1"));
+        response.addHeader("Content-Length", "" + file.length());
+        // 以流的形式下载文件
+
+        InputStream fis = new BufferedInputStream(new FileInputStream(filePath));
+        byte[] buffer = new byte[fis.available()];
+        fis.read(buffer);
+        fis.close();
+        OutputStream toClient = new BufferedOutputStream( response.getOutputStream());
+        toClient.write(buffer);
+        toClient.flush();
+        toClient.close();
     }
 
 
