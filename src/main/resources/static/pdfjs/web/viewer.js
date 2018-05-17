@@ -10051,7 +10051,7 @@ exports.ViewHistory = ViewHistory;
 "use strict";
 
 
-var DEFAULT_URL = '2.pdf';
+var DEFAULT_URL = '1.pdf';
 ;
 var pdfjsWebApp = void 0;
 {

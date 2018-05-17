@@ -57,15 +57,9 @@ public class IndexController {
     }
 
 
-
     @RequestMapping("/down")
     public void down(HttpServletResponse httpServletResponse){
-        download("D:\\workspace\\web-demo\\src\\main\\resources\\static\\pdf\\1.pdf",httpServletResponse);
-    }
-
-    @RequestMapping("/down/file")
-    public void downFile(HttpServletResponse httpServletResponse) throws Exception {
-        downloadFile("D:\\workspace\\web-demo\\src\\main\\resources\\static\\pdf","1.pdf",httpServletResponse);
+        download("/pdf/1.pdf",httpServletResponse);
     }
 
     public HttpServletResponse download(String path, HttpServletResponse response) {
@@ -91,26 +85,6 @@ public class IndexController {
         }
 
         return response;
-    }
-
-    public void downloadFile(String filePath,String fileName,HttpServletResponse response) throws Exception{
-        File file = new File(filePath);
-        // 清空response
-        response.reset();
-        // 设置response的Header
-        // 转码之后下载的文件不会出现中文乱码
-        response.addHeader("Content-Disposition", "attachment;filename=" + new String(fileName.getBytes("gbk"), "iso-8859-1"));
-        response.addHeader("Content-Length", "" + file.length());
-        // 以流的形式下载文件
-
-        InputStream fis = new BufferedInputStream(new FileInputStream(filePath));
-        byte[] buffer = new byte[fis.available()];
-        fis.read(buffer);
-        fis.close();
-        OutputStream toClient = new BufferedOutputStream( response.getOutputStream());
-        toClient.write(buffer);
-        toClient.flush();
-        toClient.close();
     }
 
 
