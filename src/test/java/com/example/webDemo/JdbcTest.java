@@ -1,10 +1,12 @@
 package com.example.webDemo;
 
-import cn.binarywang.tools.generator.EmailAddressGenerator;
-import com.example.webDemo.domain.Customer;
+import cn.binarywang.tools.generator.*;
 import com.example.webDemo.domain.Goods;
-import com.example.webDemo.repository.CustomerRepository;
 import com.example.webDemo.repository.GoodsRepository;
+import com.example.webDemo.security.connfig.SysCustomerRepository;
+import com.example.webDemo.security.connfig.SysUserRepository;
+import com.example.webDemo.security.model.SysCustomer;
+import com.example.webDemo.security.model.SysUser;
 import com.example.webDemo.service.GoodsService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -15,6 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -36,17 +40,37 @@ public class JdbcTest {
     GoodsService goodsService;
 
     @Autowired
-    CustomerRepository customerRepository;
+    SysCustomerRepository sysCustomerRepository;
+
+    PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+    @Autowired
+    SysUserRepository sysUserRepository;
+    @Test
+    public void testInsertSysUser(){
+        for (int i = 0; i < 3; i++) {
+            SysUser sysUser=new SysUser();
+            sysUser.setUsername(String.valueOf(i));
+            sysUser.setPassword(passwordEncoder.encode(String.valueOf(i)));
+            sysUser.setFullname(ChineseNameGenerator.getInstance().generate());
+            sysUserRepository.save(sysUser);
+        }
+    }
 
     @Test
-    public void testInsert() {
-        List<Customer> customers = customerRepository.findAll();
-        for (Customer customer : customers) {
+    public void testInsertSysCustomer(){
+        for (int i = 0; i <20 ; i++) {
+            SysCustomer sysCustomer=new SysCustomer();
             String account=RandomStringUtils.randomAlphanumeric(10);
-            customer.setAccount(account);
-            customer.setPassword(DigestUtils.md5Hex(account));
-            customer.setEmail(EmailAddressGenerator.getInstance().generate());
-            customerRepository.save(customer);
+            sysCustomer.setUsername(account);
+            sysCustomer.setPassword(passwordEncoder.encode("123456"));
+            sysCustomer.setIdCard(ChineseIDCardNumberGenerator.getInstance().generate());
+            sysCustomer.setName(ChineseNameGenerator.getInstance().generate());
+            sysCustomer.setSex("0");
+            sysCustomer.setAdress(ChineseAddressGenerator.getInstance().generate());
+            sysCustomer.setPhoneNum(ChineseMobileNumberGenerator.getInstance().generate());
+            sysCustomer.setEmail(EmailAddressGenerator.getInstance().generate());
+            sysCustomerRepository.save(sysCustomer);
         }
     }
 

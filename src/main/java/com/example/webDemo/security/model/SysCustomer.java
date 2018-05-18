@@ -25,6 +25,18 @@ public class SysCustomer implements UserDetails{
 
     private String password;
 
+    private String idCard;
+
+    private String name;
+
+    private String sex;
+
+    private String adress;
+
+    private String phoneNum;
+
+    private String email;
+
     @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
     private List<SysCustomer> sysCustomers;
 

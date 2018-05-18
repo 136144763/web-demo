@@ -1,7 +1,5 @@
 package com.example.webDemo.security.connfig;
 
-import com.example.webDemo.domain.Customer;
-import com.example.webDemo.repository.CustomerRepository;
 import com.example.webDemo.security.model.SysCustomer;
 import com.example.webDemo.security.model.SysUser;
 import lombok.extern.slf4j.Slf4j;

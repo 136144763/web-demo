@@ -1,5 +1,6 @@
 package com.example.webDemo.security.model;
 
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +14,7 @@ import java.util.List;
  * Created by Administrator on 2018/1/11.
  */
 @Entity
+@Data
 public class SysUser implements UserDetails {
 
     @Id
@@ -22,6 +24,8 @@ public class SysUser implements UserDetails {
     private String username;
 
     private String password;
+
+    private String fullname;
 
     @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.EAGER)
     private List<SysUser> roles;
