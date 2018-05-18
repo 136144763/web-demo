@@ -37,7 +37,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         SysUser sysUser = sysUserRepository.findByUsername(authentication.getName());
         SysCustomer sysCustomer=sysCustomerRepository.findByUsername(authentication.getName());
         if (sysUser != null) {
-            request.getSession().setAttribute("username", sysUser.getUsername());
+            request.getSession().setAttribute("username", sysUser.getFullname());
             String url = request.getRequestURI();
             if (imageCode.equalsIgnoreCase(validation) && !url.isEmpty()) {
                 response.sendRedirect("/index");
@@ -46,7 +46,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
             }
         }
         if(sysCustomer!=null){
-            request.getSession().setAttribute("username", sysCustomer.getUsername());
+            request.getSession().setAttribute("username", sysCustomer.getName());
             String url = request.getRequestURI();
             if (imageCode.equalsIgnoreCase(validation) && !url.isEmpty()) {
                 response.sendRedirect("/admin");
