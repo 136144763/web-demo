@@ -1,5 +1,7 @@
 package com.example.webDemo.security.connfig;
 
+import com.example.webDemo.domain.Customer;
+import com.example.webDemo.repository.CustomerRepository;
 import com.example.webDemo.security.model.SysUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,8 +37,9 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         String url = request.getRequestURI();
         if (imageCode.equalsIgnoreCase(validation) && !url.isEmpty()) {
             response.sendRedirect("/index");
-        }else {
+        } else {
             response.sendRedirect("/bootLogin?error");
         }
+
     }
 }

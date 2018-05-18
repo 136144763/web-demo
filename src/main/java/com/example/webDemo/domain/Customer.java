@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "t_customer")
-public class Customer {
+public class Customer{
 
     @Id
     public int userId;
@@ -32,5 +32,4 @@ public class Customer {
     public String password;
 
     public String email;
-
 }

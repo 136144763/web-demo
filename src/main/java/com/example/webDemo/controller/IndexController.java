@@ -43,9 +43,9 @@ public class IndexController {
         return "index";
     }
 
-    @GetMapping("/bootLogin")
-    public String bootLogin() {
-        return "bootLogin";
+    @GetMapping("/admin")
+    public String admin() {
+        return "admin";
     }
 
     @GetMapping("/testPDF")
