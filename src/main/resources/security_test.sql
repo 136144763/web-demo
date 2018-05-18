@@ -10,10 +10,9 @@ Target Server Type    : MYSQL
 Target Server Version : 50611
 File Encoding         : 65001
 
-Date: 2018-05-18 16:39:29
+Date: 2018-05-18 17:41:56
 */
-DROP DATABASE IF EXISTS `security_test`;
-CREATE DATABASE 'security_test';
+
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -24,13 +23,38 @@ CREATE TABLE `sys_customer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `password` varchar(255) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
+  `adress` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `id_card` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `phone_num` varchar(255) DEFAULT NULL,
+  `sex` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_customer
 -- ----------------------------
-INSERT INTO `sys_customer` VALUES ('1', '2', '2');
+INSERT INTO `sys_customer` VALUES ('22', '$2a$10$EmV3EJanJ95AiEuR1s0IDeA0pBSexgg2i42z9T6pQFoFZOX5X0gpy', 'D1gvvYerlB', '河南省濮阳市秦适辱路1500号蛋篙小区10单元144室', 'tknexbsukx@bclno.teh', '457227198909028177', '林您', '13746989296', '0');
+INSERT INTO `sys_customer` VALUES ('23', '$2a$10$AbPvMs/ijbxMoZkEisJH3.iR7cfY6lCwvCkiIl.3bvW09TXv1G7cK', 'oVH4h6Hb1w', '辽宁省丹东市敖屠掣路1057号副既小区6单元1410室', '3ha2aqembh@7oztu.wdt', '644011198204216881', '萧结婪', '17698230515', '0');
+INSERT INTO `sys_customer` VALUES ('24', '$2a$10$6Bk5pXHLLmxSP/KFjOiVbuD60D7hhs0J6fcSCxQjcJ9XdZtZW4aiG', '5m0exfwnsC', '黑龙江省鸡西市藕憎路1774号悲胜被小区6单元1159室', 'l6ffsb3z0p@gzdfz.d6i', '543885197503281017', '司马榷终', '18850553086', '0');
+INSERT INTO `sys_customer` VALUES ('25', '$2a$10$DRVgSpq6//P3DgmryIpjquJGG392ZdV1P529yIs.n35cXsK0Rg.6e', 'jFUReZZV5g', '青海省海南藏族自治州研榆路4058号缨委小区3单元193室', 'tasrnbygs7@gq9xe.xfp', '146724199011134861', '孟翌', '15811358023', '0');
+INSERT INTO `sys_customer` VALUES ('26', '$2a$10$BoQmTLihkGxiXVbSAN970.L8oknsb2LT2LLjrwIaN372xpdtcoXlq', 'KYntTn4CXy', '广西壮族自治区贺州市援决路385号娩障愁小区12单元2349室', 'g50nlghqom@pdyjw.7u6', '35624119901119001X', '潘腾为', '13877911039', '0');
+INSERT INTO `sys_customer` VALUES ('27', '$2a$10$w.9rjLGWqpm7Gy153EEs6u3/qr2Om4NC1SWs6cC5rFSkvgbLjx44O', 'mzGD3B0Wyu', '吉林省白城市喻腐路1150号鸦巧小区15单元2261室', 'njhkjhkyml@wo9ym.8ac', '337715199607149554', '公孙冻', '18290015996', '0');
+INSERT INTO `sys_customer` VALUES ('28', '$2a$10$I4GvzOZXR1DFh/1h6vOjVuSeaNZU/48VZsfm4CHRpxMEJgKlQK3VW', '3xsoblpOnp', '山东省烟台市禹朔嗽路6024号原嗓祈小区13单元1876室', 'e1tnebfanv@z0lep.iwf', '359839198202175903', '赖纫', '15908516935', '0');
+INSERT INTO `sys_customer` VALUES ('29', '$2a$10$dy59Y6n1AaRu.sBMW06ZF.v9a64hoRF6F1fy0DpW/iooxXVTAi7La', 'm6TYCmm6TD', '新疆维吾尔自治区昌吉回族自治州序斜路2444号恢性小区11单元2112室', 'rlahek3b0s@nmwek.m1y', '613501197711050752', '魏舍黔', '13155851059', '0');
+INSERT INTO `sys_customer` VALUES ('30', '$2a$10$AD8ZY5iqKpy0jfYLZUkEnOq67NI0yYbqSogru81Sk6BGMuavSGbDG', 'aaLk2aFD39', '湖南省怀化市凌刁矢路3791号笨垃痔小区19单元2482室', 'ioo41ffnf4@jrzma.pi0', '150162197604210244', '张浇', '18177514865', '0');
+INSERT INTO `sys_customer` VALUES ('31', '$2a$10$rTMR0X6oOowOu0cgu7RAe.89SXkGYF09.6q609IVbXpaYZApfV0hK', 'lANtRmBBlW', '河南省平顶山市纤术路7166号坝皑磕小区13单元1908室', 'oseih0nb2q@8bt7u.9wi', '224433197711046327', '陈漳酵', '15624208462', '0');
+INSERT INTO `sys_customer` VALUES ('32', '$2a$10$VI8iG/.2Y7H7A/kNYkt7/utm7Jy2d/rW/gbIEwYBkGe94lyUpOEjy', 'oAZe34sJw0', '广西壮族自治区柳州市铜垄路551号那瓷陨小区14单元1006室', 'geioknog3j@rgjsl.5iw', '328792197101042357', '王激宋', '17833981633', '0');
+INSERT INTO `sys_customer` VALUES ('33', '$2a$10$wjfKgsFHUT.95Jletw8hEeJpXBY8htXJFkAX1DMSKsmAoG1Ig5zSC', 'RN5WoEaM9K', '内蒙古自治区赤峰市强队路1210号挥大小区8单元708室', 'uuk1glllfi@inbkn.gfj', '230665199607096913', '高栓', '18883074851', '0');
+INSERT INTO `sys_customer` VALUES ('34', '$2a$10$Yz4mUoM6hM.xQF8vTm0SqeLD2U7rJeRPeAA39LbsO1McWIpTWLZVq', 'e1bYAn6L65', '内蒙古自治区包头市趣矛辊路337号翔约札小区18单元1398室', 'jyb7q5b91w@rldx8.jby', '822152198406022844', '公孙昏', '15020188956', '0');
+INSERT INTO `sys_customer` VALUES ('35', '$2a$10$qVWl6/CH9tOcHXcWTqp05OUYq4Wqbj.CGxvGVnDoirfKKHV7VHABu', 'HLJt4wGpuA', '陕西省商洛市佰辑驮路190号玩仍虽小区8单元637室', '2luvp4jcbw@jjdxi.pb0', '228292197811128429', '廖败', '18040912662', '0');
+INSERT INTO `sys_customer` VALUES ('36', '$2a$10$NVYH/7BHO1u4zBmFs.jMQexjzMGfGkUYHUnYA/BTYm/PxGP8XIC7.', 'jpGYZRPVV0', '湖南省湘潭市荡署钒路5803号州冰狗小区15单元1053室', 'fpyr9y1opp@fd1sy.cny', '357410199601212968', '高脸怨', '18779907644', '0');
+INSERT INTO `sys_customer` VALUES ('37', '$2a$10$.vt6ptLJ84K4tJMzuNOfeu0Ucv9j3JJ0rhMyr/uWcBYGAyiy.5S0a', 'ae2cgk2UWl', '山西省阳泉市柠递路4678号闲菱居小区4单元543室', 'rplutnrtdp@4axfp.vah', '517508197402079222', '宇文阎', '18060954264', '0');
+INSERT INTO `sys_customer` VALUES ('38', '$2a$10$gXwH7mjfsxSetL3698nKa.J2z1Yecifu0PycC4iRKZIttLrW88ghS', 'ZbLEovtVDc', '四川省南充市瞬趋路1515号侨氖小区16单元791室', 'x0niazda55@5tp2k.ify', '51972619710507886X', '钟播宾', '15122950557', '0');
+INSERT INTO `sys_customer` VALUES ('39', '$2a$10$cIjN3/ljRSuDD4XOi3/MnuqxIUE2LPGF2VIwcT.3Tqh5YuqWvK/F6', '5gzCc4jup5', '福建省漳州市裸击涎路3559号船罕参小区13单元2208室', 'lfqj8nmoju@btxce.qsg', '533916199611100244', '许故', '17607665675', '0');
+INSERT INTO `sys_customer` VALUES ('40', '$2a$10$TpcDP1bq3t/kROSaJJ3X3epUKgVltuYe99BUbR3ljR7BWVGanCd4e', 'SeBVcmsVvd', '安徽省巢湖市振始杯路1350号阮农小区13单元2422室', 'zihaa0jboe@uwfau.ask', '368086197112215817', '何赛笑', '14527290999', '0');
+INSERT INTO `sys_customer` VALUES ('41', '$2a$10$3ACI510v7IjAUDmgPAYMKOHFXIIAJcOh2tx/WRa59Hsw0aVZme8Fi', '5jbeMCmksN', '湖北省咸宁市赐簇余路5378号坡缓小区9单元219室', 'nwommjknbw@gw2nf.avg', '448773199008077763', '何幸', '15052474397', '0');
 
 -- ----------------------------
 -- Table structure for `sys_customer_role`
@@ -85,13 +109,16 @@ CREATE TABLE `sys_user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `password` varchar(255) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
+  `fullname` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES ('1', '1', '1');
+INSERT INTO `sys_user` VALUES ('2', '$2a$10$bOiUrQwtMm0orDgERrTkB.TwP0bCPvIOfhFBLCn90NFF1pw3ro6ui', '0', '丁扩魁');
+INSERT INTO `sys_user` VALUES ('3', '$2a$10$u0mF77.Z5dJGJcWAH0inXeuHD8DsNkIroZQYDyMkEm/EzYn.5ophW', '1', '杨柏');
+INSERT INTO `sys_user` VALUES ('4', '$2a$10$3.IuJolpsvVePhC8L4Mq1u9BXYNntAwERvLlU4eEoU0RUs9wUrb7u', '2', '陆评迄');
 
 -- ----------------------------
 -- Table structure for `sys_user_roles`
@@ -108,27 +135,6 @@ CREATE TABLE `sys_user_roles` (
 
 -- ----------------------------
 -- Records of sys_user_roles
--- ----------------------------
-
--- ----------------------------
--- Table structure for `t_customer`
--- ----------------------------
-DROP TABLE IF EXISTS `t_customer`;
-CREATE TABLE `t_customer` (
-  `user_id` int(11) NOT NULL,
-  `account` varchar(255) DEFAULT NULL,
-  `adress` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `id_card` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `phone_num` varchar(255) DEFAULT NULL,
-  `sex` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of t_customer
 -- ----------------------------
 
 -- ----------------------------
