@@ -17,7 +17,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     final static String[] ignore={
             "/img/**","/getVerify","/kaptcha","/alipay"
             ,"/swagger-ui.html","/webjars/**","/bootLogin/**"
-            ,"/assets/**","/login/**","/pdf/**","/testPDF/**","/pdfjs/**","/down/**"
+            ,"/assets/**","/login/**","/pdf/**","/testPDF/**","/pdfjs/**","/down/**","/admin"
     };
 
     @Autowired
@@ -29,6 +29,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
+    /**
+     * 重写该方法，添加自定义用户
+     * @param auth
+     * @throws Exception
+     */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(customerUserService());
@@ -38,7 +43,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers(ignore).permitAll()
-                .anyRequest().authenticated()
+                .anyRequest()
+                .authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/bootLogin")

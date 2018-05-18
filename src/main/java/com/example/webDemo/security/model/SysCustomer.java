@@ -1,5 +1,6 @@
 package com.example.webDemo.security.model;
 
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,10 +11,11 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Created by Administrator on 2018/1/11.
+ * @author luofei on 2018/5/18.
  */
 @Entity
-public class SysUser implements UserDetails {
+@Data
+public class SysCustomer implements UserDetails{
 
     @Id
     @GeneratedValue
@@ -23,21 +25,17 @@ public class SysUser implements UserDetails {
 
     private String password;
 
-    @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.EAGER)
-    private List<SysUser> roles;
+    @ManyToMany(cascade = {CascadeType.REFRESH},fetch = FetchType.EAGER)
+    private List<SysCustomer> sysCustomers;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<GrantedAuthority> auths = new ArrayList<>();
-        List<SysUser> users = this.getRoles();
-        for (SysUser sysUser : users) {
-            auths.add(new SimpleGrantedAuthority(sysUser.getUsername()));
+        List<GrantedAuthority> authorities=new ArrayList<>();
+        List<SysCustomer> sysCustomers=this.getSysCustomers();
+        for (SysCustomer sysCustomer:sysCustomers){
+            authorities.add(new SimpleGrantedAuthority(sysCustomer.getUsername()));
         }
-        return auths;
-    }
-
-    public List<SysUser> getRoles() {
-        return roles;
+        return authorities;
     }
 
     @Override

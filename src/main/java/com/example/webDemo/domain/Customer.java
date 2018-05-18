@@ -12,24 +12,24 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "t_customer")
-public class Customer{
+public class Customer {
 
     @Id
-    public int userId;
+    private int userId;
 
-    public String idCard;
+    private String idCard;
 
-    public String name;
+    private String name;
 
-    public String sex;
+    private String sex;
 
-    public String adress;
+    private String adress;
 
-    public String phoneNum;
+    private String phoneNum;
 
-    public String account;
+    private String account;
 
-    public String password;
+    private String password;
 
-    public String email;
+    private String email;
 }
