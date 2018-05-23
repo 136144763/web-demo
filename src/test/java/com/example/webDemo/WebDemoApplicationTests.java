@@ -13,6 +13,6 @@ public class WebDemoApplicationTests {
 
     @Test
     public void contextLoads() {
-
+        log.debug("test");
     }
 }
