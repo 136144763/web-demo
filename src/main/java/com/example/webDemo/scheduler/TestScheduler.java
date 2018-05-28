@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestScheduler {
 
-    @Scheduled(fixedRate = 60 * 1000L)
-    public void testScheduler(){
+    @Scheduled(fixedRate = 2 * 60 * 60 * 1000)
+    public void testScheduler() {
         log.info("current time={}", DateTime.now().toString("yyyy-MM-dd HH:mm:ss"));
     }
 
