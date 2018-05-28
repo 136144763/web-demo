@@ -20,5 +20,10 @@ public class TestScheduler {
         log.info("current time={}", DateTime.now().toString("yyyy-MM-dd HH:mm:ss"));
     }
 
+    @Scheduled(cron="0 0 3 * * ?")
+    public void testSchedulerByCorn() {
+        log.info("current time={}", DateTime.now().toString("yyyy-MM-dd HH:mm:ss"));
+    }
+
 
 }
