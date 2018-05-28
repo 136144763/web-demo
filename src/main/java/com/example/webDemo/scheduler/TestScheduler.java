@@ -12,7 +12,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class TestScheduler {
 
-    @Scheduled(fixedRate = 2 * 60 * 60 * 1000)
+    /**
+     * 第一次调用延时30秒，每秒执行一次
+     */
+    @Scheduled(initialDelay = 30 * 1000, fixedRate = 1000)
     public void testScheduler() {
         log.info("current time={}", DateTime.now().toString("yyyy-MM-dd HH:mm:ss"));
     }
