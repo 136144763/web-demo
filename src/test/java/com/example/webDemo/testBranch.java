@@ -12,6 +12,6 @@ public class testBranch {
 
     @Test
     public void testMerge(){
-        log.debug("test");
+        log.info("test");
     }
 }
