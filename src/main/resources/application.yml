@@ -25,4 +25,6 @@ logging:
 #pdf文件位置
 pdf.dwon: /pdf/1.pdf
 
+app.fetch.current.day: false
+
 
