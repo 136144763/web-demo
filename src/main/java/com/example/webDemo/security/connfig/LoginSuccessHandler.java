@@ -12,8 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.example.webDemo.security.validation.PictureValidation.RANDOMCODEKEY;
-
 /**
  * Created by Administrator on 2018/1/11.
  */
