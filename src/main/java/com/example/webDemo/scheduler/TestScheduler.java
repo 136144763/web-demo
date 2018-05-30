@@ -16,16 +16,19 @@ public class TestScheduler {
     @Value("${app.fetch.current.day}")
     private boolean flag;
 
-    /**
-     * 第一次调用延时30秒，每秒执行一次
-     */
-    @Scheduled(initialDelay = 30 * 1000, fixedRate = 1000)
-    public void testScheduler() {
-       if(flag){
-           prientCurrentTime();
-       }
-    }
+//    /**
+//     * 第一次调用延时30秒，每秒执行一次
+//     */
+//    @Scheduled(initialDelay = 30 * 1000, fixedRate = 1000)
+//    public void testScheduler() {
+//       if(flag){
+//           prientCurrentTime();
+//       }
+//    }
 
+    /**
+     * 每天三点执行
+     */
     @Scheduled(cron = "0 0 3 * * ?")
     public void testSchedulerByCorn() {
         if (flag) {
