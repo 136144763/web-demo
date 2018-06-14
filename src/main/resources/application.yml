@@ -13,15 +13,20 @@ server:
     timeout: 86400
   connection-timeout: 20000
 spring:
-  datasource:
-    initialize: false
-swagger:
-  title: 接口文档
-  base-package: com.example.webDemo.api
-logging:
-  level: debug
-  file: logs/demo.log
-
+  mail:
+      host: smtp.exmail.qq.com
+      protocol: smtp
+      port: 465
+      username: gitlab@huianrong.com
+      password: Har@123
+      properties:
+        mail.smtp.auth: true
+  swagger:
+    title: 接口文档
+    base-package: com.example.webDemo.api
+  logging:
+    level: debug
+    file: logs/demo.log
 #pdf文件位置
 pdf.dwon: /pdf/1.pdf
 

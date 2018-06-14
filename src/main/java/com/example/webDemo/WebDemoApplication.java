@@ -7,7 +7,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableSwagger2Doc
-@EnableScheduling
 public class WebDemoApplication {
 
 	public static void main(String[] args) {
