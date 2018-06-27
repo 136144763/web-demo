@@ -1,6 +1,6 @@
 package com.example.webDemo.repository;
 
-import com.example.webDemo.domain.SysCustomer;
+import com.example.webDemo.security.model.SysCustomer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

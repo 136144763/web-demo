@@ -1,5 +1,6 @@
 package com.example.webDemo.api;
 
+import com.example.webDemo.repository.CustomerRepository;
 import com.example.webDemo.service.CustomerService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,9 +23,9 @@ public class UserResource {
     @Autowired
     CustomerService customerService;
 
-    @ApiOperation(value = "")
+    @ApiOperation(value = "get user")
     @ResponseBody
-    @GetMapping()
+    @GetMapping("/user")
     public Object getUser() {
         return customerService.findAll();
     }

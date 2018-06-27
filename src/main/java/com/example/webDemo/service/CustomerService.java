@@ -1,8 +1,7 @@
 package com.example.webDemo.service;
 
-import com.example.webDemo.domain.SysCustomer;
 import com.example.webDemo.repository.CustomerRepository;
-import com.example.webDemo.security.connfig.SysCustomerRepository;
+import com.example.webDemo.security.model.SysCustomer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
