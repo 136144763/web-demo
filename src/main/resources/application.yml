@@ -25,7 +25,7 @@ swagger:
     title: 接口文档
     base-package: com.example.webDemo.api
 logging:
-    level: info
+    level: debug
     file: C:/Users/Administrator/Desktop/default
 #pdf文件位置
 pdf.dwon: /pdf/1.pdf

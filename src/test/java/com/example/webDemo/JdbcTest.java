@@ -58,6 +58,12 @@ public class JdbcTest {
     }
 
     @Test
+    public void testEncoder(){
+        String password="123456";
+        log.debug("password={}",passwordEncoder.encode(password));
+    }
+
+    @Test
     public void testInsertSysCustomer(){
         for (int i = 0; i <20 ; i++) {
             SysCustomer sysCustomer=new SysCustomer();
