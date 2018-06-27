@@ -1,6 +1,5 @@
 package com.example.webDemo.api;
 
-import com.example.webDemo.repository.CustomerRepository;
 import com.example.webDemo.service.CustomerService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
