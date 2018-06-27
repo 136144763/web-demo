@@ -1,9 +1,13 @@
 package com.example.webDemo.service;
 
+import com.example.webDemo.domain.SysCustomer;
+import com.example.webDemo.repository.CustomerRepository;
 import com.example.webDemo.security.connfig.SysCustomerRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author luofei on 2018/5/18.
@@ -13,6 +17,9 @@ import org.springframework.stereotype.Service;
 public class CustomerService {
 
     @Autowired
-    SysCustomerRepository sysCustomerRepository;
+    CustomerRepository customerRepository;
 
+    public List<SysCustomer> findAll(){
+        return customerRepository.findAll();
+    }
 }
