@@ -1,5 +1,6 @@
 package com.example.webDemo.security.model;
 
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +14,7 @@ import java.util.List;
  * Created by Administrator on 2018/1/11.
  */
 @Entity
+@Data
 public class SysUser implements UserDetails {
 
     @Id
@@ -23,14 +25,16 @@ public class SysUser implements UserDetails {
 
     private String password;
 
+    private String fullname;
+
     @ManyToMany(cascade = {CascadeType.REFRESH}, fetch = FetchType.EAGER)
     private List<SysUser> roles;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> auths = new ArrayList<>();
-        List<SysUser> roles = this.getRoles();
-        for (SysUser sysUser : roles) {
+        List<SysUser> users = this.getRoles();
+        for (SysUser sysUser : users) {
             auths.add(new SimpleGrantedAuthority(sysUser.getUsername()));
         }
         return auths;

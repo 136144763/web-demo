@@ -11,6 +11,25 @@ server:
   port: 8080
   session:
     timeout: 86400
+  connection-timeout: 20000
 spring:
-  datasource:
-    initialize: false
+  mail:
+      host: smtp.exmail.qq.com
+      protocol: smtp
+      port: 465
+      username: gitlab@huianrong.com
+      password: Har@123
+      properties:
+        mail.smtp.auth: true
+swagger:
+    title: 接口文档
+    base-package: com.example.webDemo.api
+logging:
+    level: debug
+    file: C:/Users/Administrator/Desktop/default
+#pdf文件位置
+pdf.dwon: /pdf/1.pdf
+
+app.fetch.current.day: true
+
+

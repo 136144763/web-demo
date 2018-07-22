@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scanPeriod="60 seconds">
+    <springProperty scope="context" name="logLevel" source="logging.level"/>
+    <springProperty scope="context" name="logFile" source="logging.file"/>
+    <!-- 控制台输出 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+    <!-- 按照每天生成日志文件 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>${logFile}.log.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <!--日志文件保留天数-->
+            <MaxHistory>30</MaxHistory>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <!--日志文件最大的大小-->
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>10MB</MaxFileSize>
+        </triggeringPolicy>
+    </appender>
+
+    <property name="smtpHost" value="smtp.exmail.qq.com"/>
+    <property name="smtpPort" value="25"/>
+    <property name="email_from" value="gitlab@huianrong.com"/>
+    <property name="username" value="gitlab@huianrong.com"/>
+    <property name="email_to" value="luofei@huianrong.com"/>
+    <property name="password" value="Har@123"/>
+    <property name="SSL" value="false"/>
+    <property name="email_subject" value="处理页面数据异常"/>
+    <appender name="errMailer" class="ch.qos.logback.classic.net.SMTPAppender">
+        <smtpHost>${smtpHost}</smtpHost>
+        <smtpPort>${smtpPort}</smtpPort>
+        <username>${username}</username>
+        <password>${password}</password>
+        <SSL>${SSL}</SSL>
+        <asynchronousSending>false</asynchronousSending>
+        <to>${email_to}</to>
+        <from>${email_from}</from>
+        <subject>${email_subject}</subject>
+        <layout class="ch.qos.logback.classic.html.HTMLLayout"/>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+    </appender>
+
+    <!--&lt;!&ndash; name为java中的包,level为日志输出级别,additivity为是否向上级输出 &ndash;&gt;-->
+    <!--<logger name="com.example" level="DEBUG" additivity="true">-->
+    <!--<appender-ref ref="FILE"/>-->
+    <!--</logger>-->
+
+    <!-- 日志输出级别 -->
+    <!--<root level="INFO">-->
+    <!--<appender-ref ref="FILE"/>-->
+    <!--</root>-->
+
+    <!--default.yml-->
+    <springProfile name="default">
+        <root level="${logLevel}">
+            <appender-ref ref="FILE"/>
+            <appender-ref ref="STDOUT"/>
+            <!--<appender-ref ref="errMailer"/>-->
+        </root>
+    </springProfile>
+</configuration>
