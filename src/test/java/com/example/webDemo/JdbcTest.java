@@ -46,16 +46,16 @@ public class JdbcTest {
 
     @Autowired
     SysUserRepository sysUserRepository;
-    @Test
-    public void testInsertSysUser(){
-        for (int i = 0; i < 3; i++) {
-            SysUser sysUser=new SysUser();
-            sysUser.setUsername(String.valueOf(i));
-            sysUser.setPassword(passwordEncoder.encode(String.valueOf(i)));
-            sysUser.setFullname(ChineseNameGenerator.getInstance().generate());
-            sysUserRepository.save(sysUser);
-        }
-    }
+//    @Test
+//    public void testInsertSysUser(){
+//        for (int i = 0; i < 3; i++) {
+//            SysUser sysUser=new SysUser();
+//            sysUser.setUsername(String.valueOf(i));
+//            sysUser.setPassword(passwordEncoder.encode(String.valueOf(i)));
+//            sysUser.setFullname(ChineseNameGenerator.getInstance().generate());
+//            sysUserRepository.save(sysUser);
+//        }
+//    }
 
     @Test
     public void testEncoder(){

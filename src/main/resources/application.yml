@@ -1,5 +1,5 @@
 spring.datasource.driver-class-name: com.mysql.jdbc.Driver
-spring.datasource.url: jdbc:mysql://localhost:3306/security_test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+spring.datasource.url: jdbc:mysql://192.168.1.42:3306/security_test?useUnicode=true&characterEncoding=utf-8&useSSL=false
 spring.datasource.username: root
 spring.datasource.password: 123456
 
@@ -25,8 +25,8 @@ swagger:
     title: 接口文档
     base-package: com.example.webDemo.api
 logging:
-    level: debug
-    file: C:/Users/Administrator/Desktop/default
+    level: info
+    file: /root/web-demo
 #pdf文件位置
 pdf.dwon: /pdf/1.pdf
 
